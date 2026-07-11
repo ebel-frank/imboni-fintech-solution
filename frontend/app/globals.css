@@ -381,11 +381,6 @@ input::placeholder {
   background: #edf5e5;
 }
 
-.nav-item.muted {
-  opacity: 0.45;
-  cursor: not-allowed;
-}
-
 .hackathon-badge {
   display: grid;
   gap: 4px;
@@ -503,11 +498,18 @@ input::placeholder {
 .profile-panel,
 .signals-panel,
 .trend-panel,
-.transactions-panel {
+.transactions-panel,
+.bureau-panel {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
   box-shadow: 0 12px 34px rgba(22, 42, 53, 0.07);
+}
+
+.bureau-panel {
+  display: grid;
+  gap: 18px;
+  padding: 20px;
 }
 
 .data-state {
@@ -715,6 +717,14 @@ input::placeholder {
   color: var(--muted);
 }
 
+.reason-list {
+  margin: 4px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
 .section-title {
   display: flex;
   align-items: center;
@@ -748,6 +758,11 @@ input::placeholder {
 .band-pill.build {
   color: var(--rust);
   background: #f8e7e2;
+}
+
+.band-pill.neutral {
+  color: var(--blue);
+  background: #e6eef2;
 }
 
 .profile-grid {

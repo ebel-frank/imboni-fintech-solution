@@ -501,12 +501,6 @@ export default function Home() {
 
         <nav className="nav-stack" aria-label="Primary">
           <button className="nav-item active">Farmer search</button>
-          <button className="nav-item muted" disabled>
-            Risk model
-          </button>
-          <button className="nav-item muted" disabled>
-            Portfolio
-          </button>
         </nav>
 
         <div className="hackathon-badge">
@@ -646,7 +640,7 @@ export default function Home() {
                 <div className="decision-box">
                   <span>Recommendation</span>
                   <strong>{selectedBand.decision}</strong>
-                  <small>{selectedFarmer.score.loanRecommendation}</small>
+                  <small>{selectedFarmer.underwriting.reasons[0]}</small>
                 </div>
               </article>
 
@@ -684,6 +678,67 @@ export default function Home() {
                   </div>
                 </dl>
               </article>
+            </section>
+
+            <section className="bureau-panel">
+              <div className="section-title">
+                <h3>Credit bureau (CRB) &amp; underwriting</h3>
+                <span className={`band-pill ${selectedFarmer.creditBureau.tone}`}>
+                  {selectedFarmer.creditBureau.recordFound
+                    ? `Band ${selectedFarmer.creditBureau.band}`
+                    : "Thin file"}
+                </span>
+              </div>
+
+              {selectedFarmer.creditBureau.recordFound ? (
+                <dl className="profile-grid">
+                  <div>
+                    <dt>Bureau score</dt>
+                    <dd>{selectedFarmer.creditBureau.score}</dd>
+                  </div>
+                  <div>
+                    <dt>Active loans</dt>
+                    <dd>
+                      {selectedFarmer.creditBureau.activeLoans} / {selectedFarmer.creditBureau.totalLoans}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Outstanding</dt>
+                    <dd>{formatCurrency(selectedFarmer.creditBureau.outstandingRwf)}</dd>
+                  </div>
+                  <div>
+                    <dt>Arrears status</dt>
+                    <dd>{selectedFarmer.creditBureau.currentlyInArrears ? "In arrears" : "Current"}</dd>
+                  </div>
+                  <div>
+                    <dt>Bureau inquiries (12m)</dt>
+                    <dd>{selectedFarmer.creditBureau.inquiries12m}</dd>
+                  </div>
+                  <div>
+                    <dt>Negative listing</dt>
+                    <dd>{selectedFarmer.creditBureau.negativeListing ? "Yes" : "No"}</dd>
+                  </div>
+                </dl>
+              ) : (
+                <p className="search-hint">
+                  No bureau record found for this farmer (thin file) — underwriting relies on the MoMo
+                  behavioural score alone.
+                </p>
+              )}
+
+              <div className="decision-box">
+                <span>Underwriting decision</span>
+                <strong>
+                  {selectedFarmer.underwriting.decision === "approve"
+                    ? `Approve up to ${formatCurrency(selectedFarmer.underwriting.limit_rwf)}`
+                    : "Decline / refer to manual review"}
+                </strong>
+                <ul className="reason-list">
+                  {selectedFarmer.underwriting.reasons.map((reason) => (
+                    <li key={reason}>{reason}</li>
+                  ))}
+                </ul>
+              </div>
             </section>
 
             <section className="evidence-layout">

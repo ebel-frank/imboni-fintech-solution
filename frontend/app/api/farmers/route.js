@@ -1,5 +1,6 @@
 import { getSessionUser } from "../../../lib/auth";
 import { loadMomoDataset } from "../../../lib/data";
+import { crbFeatures, lookupCrbRecord } from "../../../lib/crb";
 
 const scoreWeights = {
   incomeReliability: 0.3,
@@ -149,14 +150,68 @@ function getBand(score) {
   return "Build";
 }
 
-function getLoanRecommendation(score, averageMonthlyIncoming) {
-  if (score < 600) {
-    return "Savings-first path: review again after three stable income months.";
+function roundToThousand(value) {
+  return Math.round(value / 1000) * 1000;
+}
+
+function getCrbTone(band) {
+  if (band === "A") return "excellent";
+  if (band === "B") return "strong";
+  if (band === "C") return "watch";
+  if (band === "D" || band === "E") return "build";
+  return "neutral";
+}
+
+// Deterministic, explainable underwriting overlay per README §5.4: combines the
+// MoMo-only Imboni score with the CRB record and existing loan exposure to avoid
+// debt-stacking. Kept separate from buildScore() so the score itself stays a pure
+// behavioural signal.
+function buildUnderwriting(score, crbReport, crbFeat, averageMonthlyIncoming) {
+  if (score.value < 600) {
+    return {
+      decision: "decline",
+      limit_rwf: 0,
+      reasons: ["Imboni score below 600 — savings-first path: review again after three stable income months."],
+    };
   }
 
-  const multiplier = score >= 760 ? 2.2 : score >= 680 ? 1.45 : 0.8;
-  const limit = Math.max(25000, Math.round((averageMonthlyIncoming * multiplier) / 1000) * 1000);
-  return `Suggested seasonal credit ceiling: RWF ${limit.toLocaleString("en-US")}.`;
+  const multiplier = score.value >= 760 ? 2.2 : score.value >= 680 ? 1.45 : 0.8;
+  let limit = Math.max(25000, roundToThousand(averageMonthlyIncoming * multiplier));
+  const reasons = [`Base limit from Imboni score (${score.value}, ${score.band}): RWF ${limit.toLocaleString("en-US")}.`];
+
+  if (!crbFeat.has_crb_record) {
+    reasons.push("No CRB record on file (thin file) — limit set from MoMo behavioural score alone.");
+  } else if (crbFeat.negative_listing) {
+    return {
+      decision: "decline",
+      limit_rwf: 0,
+      reasons: [...reasons, `Bureau negative listing on file (Band ${crbFeat.band}) — refer to manual underwriting.`],
+    };
+  } else if (crbFeat.currently_in_arrears) {
+    limit = roundToThousand(limit * 0.4);
+    reasons.push(`Currently in arrears at another lender (Band ${crbFeat.band}) — limit reduced 60%.`);
+  } else if (crbFeat.ever_written_off) {
+    limit = roundToThousand(limit * 0.7);
+    reasons.push(`Historic written-off account on bureau file (Band ${crbFeat.band}) — limit reduced 30%.`);
+  } else if (crbFeat.crb_score >= 750) {
+    limit = roundToThousand(limit * 1.15);
+    reasons.push(`Clean bureau history, Band ${crbFeat.band} (score ${crbFeat.crb_score}) — limit increased 15%.`);
+  } else {
+    reasons.push(`Clean bureau history, Band ${crbFeat.band} (score ${crbFeat.crb_score}) — no adjustment.`);
+  }
+
+  if (crbFeat.total_outstanding_rwf > 0) {
+    limit = Math.max(0, limit - crbFeat.total_outstanding_rwf);
+    reasons.push(
+      `Existing loan exposure of RWF ${crbFeat.total_outstanding_rwf.toLocaleString("en-US")} deducted to avoid debt-stacking.`
+    );
+  }
+
+  return {
+    decision: limit > 0 ? "approve" : "decline",
+    limit_rwf: Math.max(0, limit),
+    reasons,
+  };
 }
 
 function buildScore(farmer, transactions, monthlyTrend, monthRange, metrics) {
@@ -218,7 +273,6 @@ function buildScore(farmer, transactions, monthlyTrend, monthRange, metrics) {
     value,
     percent: Math.round(clamp(((value - 300) / 550) * 100)),
     band: getBand(value),
-    loanRecommendation: getLoanRecommendation(value, metrics.averageMonthlyIncoming),
     signals: [
       {
         key: "incomeReliability",
@@ -273,17 +327,35 @@ function enrichFarmer(farmer, period) {
     activeMonths: new Set(transactions.map((transaction) => transaction.month)).size,
   };
 
+  const score = buildScore(farmer, transactions, monthlyTrend, monthRange, metrics);
+  const crbReport = lookupCrbRecord({ msisdn: farmer.msisdn });
+  const crbFeat = crbFeatures(crbReport);
+
   return {
     farmer_id: farmer.farmer_id,
     name: farmer.name,
     msisdn: farmer.msisdn,
     district: farmer.district,
     primary_activity: farmer.primary_activity,
-    n_transactions: farmer.n_transactions,
     metrics,
     monthlyTrend,
     topCounterparties: getTopCounterparties(transactions),
-    score: buildScore(farmer, transactions, monthlyTrend, monthRange, metrics),
+    score,
+    creditBureau: {
+      recordFound: Boolean(crbReport.record_found),
+      tone: getCrbTone(crbFeat.band),
+      score: crbFeat.crb_score,
+      band: crbFeat.band,
+      totalLoans: crbFeat.n_loans,
+      activeLoans: crbFeat.n_active,
+      outstandingRwf: crbFeat.total_outstanding_rwf,
+      currentlyInArrears: Boolean(crbFeat.currently_in_arrears),
+      negativeListing: Boolean(crbFeat.negative_listing),
+      everWrittenOff: Boolean(crbFeat.ever_written_off),
+      inquiries12m: crbFeat.n_inquiries_12m,
+      message: crbReport.record_found ? null : crbReport.message,
+    },
+    underwriting: buildUnderwriting(score, crbReport, crbFeat, metrics.averageMonthlyIncoming),
     transactions,
   };
 }
