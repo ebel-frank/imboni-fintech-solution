@@ -1,0 +1,8619 @@
+{
+ "dataset": "synthetic_momo_transactions_v1",
+ "disclaimer": "Fully synthetic demo data generated for the Umuhinzi Digital Hackathon 2026. All names, phone numbers and merchant codes are fictional.",
+ "currency": "RWF",
+ "period": {
+  "start": "2025-07-12",
+  "end": "2026-07-11"
+ },
+ "conventions": {
+  "TRANSFER": "P2P mobile-money transfer between phone numbers (MSISDNs); sender pays a tiered fee.",
+  "PAYMENT": "Merchant payment to an 8-digit merchant code; no fee.",
+  "direction": "sender == farmer msisdn -> outgoing; receiver == farmer msisdn -> incoming.",
+  "fee_tiers_rwf": {
+   "<=1000": 20,
+   "1001-10000": 100,
+   "10001-150000": 250,
+   ">150000": 1500
+  },
+  "warning": "profile_hint and counterparty_legend are ground truth for the team only \u2014 do NOT feed them to the model."
+ },
+ "farmers": [
+  {
+   "farmer_id": "F001",
+   "name": "Mukamana Josiane",
+   "msisdn": "250793116739",
+   "district": "Nyagatare",
+   "primary_activity": "Dairy + maize",
+   "profile_hint": "strong recurring income, disciplined saver \u2014 model should score HIGH",
+   "counterparty_legend": {
+    "250788777572": "Dairy cooperative \u2014 monthly milk payment (same sender, day 3-6 each month)",
+    "250790256787": "Grain trader \u2014 seasonal maize sales",
+    "250789146316": "Ibimina savings group \u2014 fixed RWF 5,000 monthly contribution",
+    "44711873": "Airtime top-up",
+    "23439167": "Cash Power electricity",
+    "42706266": "School fees",
+    "44852685": "Agro-dealer \u2014 seeds & fertilizer at planting",
+    "49936578": "Local shop / kiosk",
+    "250792091161": "Relative in Kigali \u2014 occasional support"
+   },
+   "n_transactions": 306,
+   "transactions": [
+    {
+     "id": 1,
+     "date": "2025-07-12",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 2,
+     "date": "2025-07-13",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 3,
+     "date": "2025-07-14",
+     "type": "PAYMENT",
+     "amount_rwf": 2600,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 4,
+     "date": "2025-07-15",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 5,
+     "date": "2025-07-16",
+     "type": "TRANSFER",
+     "amount_rwf": 90000,
+     "receiver": "250793116739",
+     "sender": "250790256787",
+     "fee_rwf": 0
+    },
+    {
+     "id": 6,
+     "date": "2025-07-16",
+     "type": "PAYMENT",
+     "amount_rwf": 3400,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 7,
+     "date": "2025-07-18",
+     "type": "PAYMENT",
+     "amount_rwf": 2800,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 8,
+     "date": "2025-07-21",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 9,
+     "date": "2025-07-22",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 10,
+     "date": "2025-07-22",
+     "type": "TRANSFER",
+     "amount_rwf": 2100,
+     "receiver": "250791344207",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 11,
+     "date": "2025-07-23",
+     "type": "PAYMENT",
+     "amount_rwf": 5700,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 12,
+     "date": "2025-07-24",
+     "type": "PAYMENT",
+     "amount_rwf": 7000,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 13,
+     "date": "2025-07-26",
+     "type": "PAYMENT",
+     "amount_rwf": 3500,
+     "receiver": "23439167",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 14,
+     "date": "2025-07-26",
+     "type": "TRANSFER",
+     "amount_rwf": 2800,
+     "receiver": "250788810891",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 15,
+     "date": "2025-07-27",
+     "type": "PAYMENT",
+     "amount_rwf": 5400,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 16,
+     "date": "2025-07-27",
+     "type": "TRANSFER",
+     "amount_rwf": 2800,
+     "receiver": "250790672642",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 17,
+     "date": "2025-07-28",
+     "type": "TRANSFER",
+     "amount_rwf": 4700,
+     "receiver": "250791712526",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 18,
+     "date": "2025-08-02",
+     "type": "PAYMENT",
+     "amount_rwf": 5100,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 19,
+     "date": "2025-08-02",
+     "type": "TRANSFER",
+     "amount_rwf": 4100,
+     "receiver": "250790763934",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 20,
+     "date": "2025-08-03",
+     "type": "TRANSFER",
+     "amount_rwf": 43000,
+     "receiver": "250793116739",
+     "sender": "250788777572",
+     "fee_rwf": 0
+    },
+    {
+     "id": 21,
+     "date": "2025-08-03",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 22,
+     "date": "2025-08-04",
+     "type": "PAYMENT",
+     "amount_rwf": 4500,
+     "receiver": "23439167",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 23,
+     "date": "2025-08-04",
+     "type": "TRANSFER",
+     "amount_rwf": 3100,
+     "receiver": "250791635656",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 24,
+     "date": "2025-08-05",
+     "type": "TRANSFER",
+     "amount_rwf": 5000,
+     "receiver": "250789146316",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 25,
+     "date": "2025-08-06",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 26,
+     "date": "2025-08-06",
+     "type": "TRANSFER",
+     "amount_rwf": 4700,
+     "receiver": "250788403906",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 27,
+     "date": "2025-08-09",
+     "type": "TRANSFER",
+     "amount_rwf": 5200,
+     "receiver": "250789267095",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 28,
+     "date": "2025-08-11",
+     "type": "PAYMENT",
+     "amount_rwf": 8000,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 29,
+     "date": "2025-08-12",
+     "type": "TRANSFER",
+     "amount_rwf": 4500,
+     "receiver": "250793116739",
+     "sender": "250788994967",
+     "fee_rwf": 0
+    },
+    {
+     "id": 30,
+     "date": "2025-08-16",
+     "type": "PAYMENT",
+     "amount_rwf": 5400,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 31,
+     "date": "2025-08-18",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 32,
+     "date": "2025-08-19",
+     "type": "PAYMENT",
+     "amount_rwf": 2300,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 33,
+     "date": "2025-08-19",
+     "type": "TRANSFER",
+     "amount_rwf": 900,
+     "receiver": "250793457239",
+     "sender": "250793116739",
+     "fee_rwf": 20
+    },
+    {
+     "id": 34,
+     "date": "2025-08-20",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 35,
+     "date": "2025-08-20",
+     "type": "TRANSFER",
+     "amount_rwf": 500,
+     "receiver": "250792970535",
+     "sender": "250793116739",
+     "fee_rwf": 20
+    },
+    {
+     "id": 36,
+     "date": "2025-08-21",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 37,
+     "date": "2025-08-22",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 38,
+     "date": "2025-08-23",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 39,
+     "date": "2025-08-24",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 40,
+     "date": "2025-08-26",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 41,
+     "date": "2025-08-26",
+     "type": "PAYMENT",
+     "amount_rwf": 5200,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 42,
+     "date": "2025-09-02",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 43,
+     "date": "2025-09-03",
+     "type": "TRANSFER",
+     "amount_rwf": 49000,
+     "receiver": "250793116739",
+     "sender": "250788777572",
+     "fee_rwf": 0
+    },
+    {
+     "id": 44,
+     "date": "2025-09-03",
+     "type": "PAYMENT",
+     "amount_rwf": 2900,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 45,
+     "date": "2025-09-04",
+     "type": "TRANSFER",
+     "amount_rwf": 4700,
+     "receiver": "250790699287",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 46,
+     "date": "2025-09-06",
+     "type": "PAYMENT",
+     "amount_rwf": 4300,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 47,
+     "date": "2025-09-08",
+     "type": "TRANSFER",
+     "amount_rwf": 5000,
+     "receiver": "250789146316",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 48,
+     "date": "2025-09-08",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 49,
+     "date": "2025-09-10",
+     "type": "TRANSFER",
+     "amount_rwf": 3800,
+     "receiver": "250790421947",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 50,
+     "date": "2025-09-11",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 51,
+     "date": "2025-09-11",
+     "type": "TRANSFER",
+     "amount_rwf": 2900,
+     "receiver": "250792133470",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 52,
+     "date": "2025-09-12",
+     "type": "PAYMENT",
+     "amount_rwf": 28000,
+     "receiver": "42706266",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 53,
+     "date": "2025-09-13",
+     "type": "TRANSFER",
+     "amount_rwf": 7800,
+     "receiver": "250793116739",
+     "sender": "250788318635",
+     "fee_rwf": 0
+    },
+    {
+     "id": 54,
+     "date": "2025-09-14",
+     "type": "PAYMENT",
+     "amount_rwf": 3500,
+     "receiver": "23439167",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 55,
+     "date": "2025-09-15",
+     "type": "PAYMENT",
+     "amount_rwf": 17000,
+     "receiver": "44852685",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 56,
+     "date": "2025-09-18",
+     "type": "TRANSFER",
+     "amount_rwf": 3400,
+     "receiver": "250793116739",
+     "sender": "250789450770",
+     "fee_rwf": 0
+    },
+    {
+     "id": 57,
+     "date": "2025-09-20",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 58,
+     "date": "2025-09-20",
+     "type": "TRANSFER",
+     "amount_rwf": 2100,
+     "receiver": "250791697229",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 59,
+     "date": "2025-09-22",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 60,
+     "date": "2025-09-22",
+     "type": "PAYMENT",
+     "amount_rwf": 5700,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 61,
+     "date": "2025-09-22",
+     "type": "TRANSFER",
+     "amount_rwf": 3600,
+     "receiver": "250793784475",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 62,
+     "date": "2025-09-24",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 63,
+     "date": "2025-09-24",
+     "type": "TRANSFER",
+     "amount_rwf": 1900,
+     "receiver": "250792596750",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 64,
+     "date": "2025-09-25",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 65,
+     "date": "2025-09-26",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 66,
+     "date": "2025-09-26",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 67,
+     "date": "2025-09-28",
+     "type": "PAYMENT",
+     "amount_rwf": 5700,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 68,
+     "date": "2025-10-02",
+     "type": "TRANSFER",
+     "amount_rwf": 3000,
+     "receiver": "250793116739",
+     "sender": "250791640967",
+     "fee_rwf": 0
+    },
+    {
+     "id": 69,
+     "date": "2025-10-03",
+     "type": "PAYMENT",
+     "amount_rwf": 5300,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 70,
+     "date": "2025-10-04",
+     "type": "TRANSFER",
+     "amount_rwf": 59000,
+     "receiver": "250793116739",
+     "sender": "250788777572",
+     "fee_rwf": 0
+    },
+    {
+     "id": 71,
+     "date": "2025-10-05",
+     "type": "TRANSFER",
+     "amount_rwf": 5000,
+     "receiver": "250789146316",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 72,
+     "date": "2025-10-05",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 73,
+     "date": "2025-10-07",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 74,
+     "date": "2025-10-07",
+     "type": "TRANSFER",
+     "amount_rwf": 4400,
+     "receiver": "250793177934",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 75,
+     "date": "2025-10-08",
+     "type": "PAYMENT",
+     "amount_rwf": 27000,
+     "receiver": "44852685",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 76,
+     "date": "2025-10-09",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 77,
+     "date": "2025-10-13",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 78,
+     "date": "2025-10-14",
+     "type": "PAYMENT",
+     "amount_rwf": 3600,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 79,
+     "date": "2025-10-15",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 80,
+     "date": "2025-10-15",
+     "type": "TRANSFER",
+     "amount_rwf": 5900,
+     "receiver": "250788297571",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 81,
+     "date": "2025-10-16",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 82,
+     "date": "2025-10-17",
+     "type": "TRANSFER",
+     "amount_rwf": 4700,
+     "receiver": "250793663686",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 83,
+     "date": "2025-10-19",
+     "type": "PAYMENT",
+     "amount_rwf": 3100,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 84,
+     "date": "2025-10-20",
+     "type": "PAYMENT",
+     "amount_rwf": 2700,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 85,
+     "date": "2025-10-21",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 86,
+     "date": "2025-10-22",
+     "type": "PAYMENT",
+     "amount_rwf": 6500,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 87,
+     "date": "2025-10-22",
+     "type": "TRANSFER",
+     "amount_rwf": 5600,
+     "receiver": "250790097923",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 88,
+     "date": "2025-10-24",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "23439167",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 89,
+     "date": "2025-10-24",
+     "type": "PAYMENT",
+     "amount_rwf": 6900,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 90,
+     "date": "2025-10-27",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 91,
+     "date": "2025-10-27",
+     "type": "TRANSFER",
+     "amount_rwf": 2400,
+     "receiver": "250793325498",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 92,
+     "date": "2025-10-28",
+     "type": "TRANSFER",
+     "amount_rwf": 2300,
+     "receiver": "250789154511",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 93,
+     "date": "2025-11-02",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 94,
+     "date": "2025-11-03",
+     "type": "TRANSFER",
+     "amount_rwf": 60000,
+     "receiver": "250793116739",
+     "sender": "250788777572",
+     "fee_rwf": 0
+    },
+    {
+     "id": 95,
+     "date": "2025-11-03",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 96,
+     "date": "2025-11-05",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 97,
+     "date": "2025-11-05",
+     "type": "PAYMENT",
+     "amount_rwf": 3600,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 98,
+     "date": "2025-11-06",
+     "type": "TRANSFER",
+     "amount_rwf": 7600,
+     "receiver": "250793116739",
+     "sender": "250793543118",
+     "fee_rwf": 0
+    },
+    {
+     "id": 99,
+     "date": "2025-11-08",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 100,
+     "date": "2025-11-08",
+     "type": "PAYMENT",
+     "amount_rwf": 7200,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 101,
+     "date": "2025-11-08",
+     "type": "TRANSFER",
+     "amount_rwf": 4800,
+     "receiver": "250793116739",
+     "sender": "250788584482",
+     "fee_rwf": 0
+    },
+    {
+     "id": 102,
+     "date": "2025-11-08",
+     "type": "TRANSFER",
+     "amount_rwf": 18000,
+     "receiver": "250793116739",
+     "sender": "250792091161",
+     "fee_rwf": 0
+    },
+    {
+     "id": 103,
+     "date": "2025-11-09",
+     "type": "TRANSFER",
+     "amount_rwf": 5000,
+     "receiver": "250789146316",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 104,
+     "date": "2025-11-09",
+     "type": "PAYMENT",
+     "amount_rwf": 1600,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 105,
+     "date": "2025-11-10",
+     "type": "PAYMENT",
+     "amount_rwf": 1100,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 106,
+     "date": "2025-11-12",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 107,
+     "date": "2025-11-13",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 108,
+     "date": "2025-11-13",
+     "type": "PAYMENT",
+     "amount_rwf": 4800,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 109,
+     "date": "2025-11-14",
+     "type": "TRANSFER",
+     "amount_rwf": 2100,
+     "receiver": "250793730180",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 110,
+     "date": "2025-11-15",
+     "type": "PAYMENT",
+     "amount_rwf": 6100,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 111,
+     "date": "2025-11-15",
+     "type": "TRANSFER",
+     "amount_rwf": 3600,
+     "receiver": "250791419066",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 112,
+     "date": "2025-11-16",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 113,
+     "date": "2025-11-17",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 114,
+     "date": "2025-11-19",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 115,
+     "date": "2025-11-19",
+     "type": "TRANSFER",
+     "amount_rwf": 2500,
+     "receiver": "250789687926",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 116,
+     "date": "2025-11-21",
+     "type": "PAYMENT",
+     "amount_rwf": 2500,
+     "receiver": "23439167",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 117,
+     "date": "2025-11-21",
+     "type": "PAYMENT",
+     "amount_rwf": 5600,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 118,
+     "date": "2025-11-21",
+     "type": "TRANSFER",
+     "amount_rwf": 500,
+     "receiver": "250788816232",
+     "sender": "250793116739",
+     "fee_rwf": 20
+    },
+    {
+     "id": 119,
+     "date": "2025-11-22",
+     "type": "PAYMENT",
+     "amount_rwf": 1800,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 120,
+     "date": "2025-12-04",
+     "type": "TRANSFER",
+     "amount_rwf": 60000,
+     "receiver": "250793116739",
+     "sender": "250788777572",
+     "fee_rwf": 0
+    },
+    {
+     "id": 121,
+     "date": "2025-12-04",
+     "type": "TRANSFER",
+     "amount_rwf": 4300,
+     "receiver": "250793556932",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 122,
+     "date": "2025-12-05",
+     "type": "PAYMENT",
+     "amount_rwf": 1600,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 123,
+     "date": "2025-12-05",
+     "type": "TRANSFER",
+     "amount_rwf": 5100,
+     "receiver": "250792332711",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 124,
+     "date": "2025-12-07",
+     "type": "TRANSFER",
+     "amount_rwf": 5000,
+     "receiver": "250789146316",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 125,
+     "date": "2025-12-07",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 126,
+     "date": "2025-12-09",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 127,
+     "date": "2025-12-09",
+     "type": "PAYMENT",
+     "amount_rwf": 4000,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 128,
+     "date": "2025-12-12",
+     "type": "PAYMENT",
+     "amount_rwf": 3300,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 129,
+     "date": "2025-12-13",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 130,
+     "date": "2025-12-15",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 131,
+     "date": "2025-12-15",
+     "type": "TRANSFER",
+     "amount_rwf": 4100,
+     "receiver": "250792854596",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 132,
+     "date": "2025-12-17",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 133,
+     "date": "2025-12-17",
+     "type": "PAYMENT",
+     "amount_rwf": 2300,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 134,
+     "date": "2025-12-18",
+     "type": "PAYMENT",
+     "amount_rwf": 4600,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 135,
+     "date": "2025-12-19",
+     "type": "TRANSFER",
+     "amount_rwf": 20000,
+     "receiver": "250793116739",
+     "sender": "250792091161",
+     "fee_rwf": 0
+    },
+    {
+     "id": 136,
+     "date": "2025-12-20",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 137,
+     "date": "2025-12-24",
+     "type": "PAYMENT",
+     "amount_rwf": 3500,
+     "receiver": "23439167",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 138,
+     "date": "2025-12-24",
+     "type": "TRANSFER",
+     "amount_rwf": 4900,
+     "receiver": "250793116739",
+     "sender": "250791271782",
+     "fee_rwf": 0
+    },
+    {
+     "id": 139,
+     "date": "2025-12-26",
+     "type": "TRANSFER",
+     "amount_rwf": 4600,
+     "receiver": "250791870914",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 140,
+     "date": "2025-12-28",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 141,
+     "date": "2025-12-28",
+     "type": "TRANSFER",
+     "amount_rwf": 5000,
+     "receiver": "250791940790",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 142,
+     "date": "2026-01-01",
+     "type": "PAYMENT",
+     "amount_rwf": 6400,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 143,
+     "date": "2026-01-04",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 144,
+     "date": "2026-01-04",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "23439167",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 145,
+     "date": "2026-01-06",
+     "type": "TRANSFER",
+     "amount_rwf": 49000,
+     "receiver": "250793116739",
+     "sender": "250788777572",
+     "fee_rwf": 0
+    },
+    {
+     "id": 146,
+     "date": "2026-01-06",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 147,
+     "date": "2026-01-08",
+     "type": "TRANSFER",
+     "amount_rwf": 4100,
+     "receiver": "250793116739",
+     "sender": "250793160227",
+     "fee_rwf": 0
+    },
+    {
+     "id": 148,
+     "date": "2026-01-09",
+     "type": "TRANSFER",
+     "amount_rwf": 5000,
+     "receiver": "250789146316",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 149,
+     "date": "2026-01-09",
+     "type": "TRANSFER",
+     "amount_rwf": 4500,
+     "receiver": "250793250867",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 150,
+     "date": "2026-01-10",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 151,
+     "date": "2026-01-10",
+     "type": "PAYMENT",
+     "amount_rwf": 1800,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 152,
+     "date": "2026-01-11",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 153,
+     "date": "2026-01-14",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 154,
+     "date": "2026-01-15",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 155,
+     "date": "2026-01-17",
+     "type": "PAYMENT",
+     "amount_rwf": 2100,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 156,
+     "date": "2026-01-17",
+     "type": "TRANSFER",
+     "amount_rwf": 2700,
+     "receiver": "250791081247",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 157,
+     "date": "2026-01-18",
+     "type": "PAYMENT",
+     "amount_rwf": 33000,
+     "receiver": "42706266",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 158,
+     "date": "2026-01-18",
+     "type": "PAYMENT",
+     "amount_rwf": 3200,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 159,
+     "date": "2026-01-20",
+     "type": "PAYMENT",
+     "amount_rwf": 1900,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 160,
+     "date": "2026-01-21",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 161,
+     "date": "2026-01-21",
+     "type": "PAYMENT",
+     "amount_rwf": 1900,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 162,
+     "date": "2026-01-21",
+     "type": "TRANSFER",
+     "amount_rwf": 2800,
+     "receiver": "250789284913",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 163,
+     "date": "2026-01-22",
+     "type": "PAYMENT",
+     "amount_rwf": 7100,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 164,
+     "date": "2026-01-25",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 165,
+     "date": "2026-01-25",
+     "type": "TRANSFER",
+     "amount_rwf": 3300,
+     "receiver": "250790936406",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 166,
+     "date": "2026-01-26",
+     "type": "PAYMENT",
+     "amount_rwf": 5500,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 167,
+     "date": "2026-01-27",
+     "type": "TRANSFER",
+     "amount_rwf": 4900,
+     "receiver": "250788145095",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 168,
+     "date": "2026-02-03",
+     "type": "PAYMENT",
+     "amount_rwf": 28000,
+     "receiver": "44852685",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 169,
+     "date": "2026-02-03",
+     "type": "TRANSFER",
+     "amount_rwf": 3900,
+     "receiver": "250788216881",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 170,
+     "date": "2026-02-06",
+     "type": "TRANSFER",
+     "amount_rwf": 61000,
+     "receiver": "250793116739",
+     "sender": "250788777572",
+     "fee_rwf": 0
+    },
+    {
+     "id": 171,
+     "date": "2026-02-07",
+     "type": "TRANSFER",
+     "amount_rwf": 66000,
+     "receiver": "250793116739",
+     "sender": "250790256787",
+     "fee_rwf": 0
+    },
+    {
+     "id": 172,
+     "date": "2026-02-07",
+     "type": "TRANSFER",
+     "amount_rwf": 5000,
+     "receiver": "250789146316",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 173,
+     "date": "2026-02-07",
+     "type": "PAYMENT",
+     "amount_rwf": 6600,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 174,
+     "date": "2026-02-09",
+     "type": "PAYMENT",
+     "amount_rwf": 6200,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 175,
+     "date": "2026-02-10",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 176,
+     "date": "2026-02-10",
+     "type": "PAYMENT",
+     "amount_rwf": 8000,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 177,
+     "date": "2026-02-11",
+     "type": "PAYMENT",
+     "amount_rwf": 3200,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 178,
+     "date": "2026-02-11",
+     "type": "TRANSFER",
+     "amount_rwf": 3900,
+     "receiver": "250791948791",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 179,
+     "date": "2026-02-14",
+     "type": "TRANSFER",
+     "amount_rwf": 5300,
+     "receiver": "250793020480",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 180,
+     "date": "2026-02-15",
+     "type": "TRANSFER",
+     "amount_rwf": 5200,
+     "receiver": "250791500149",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 181,
+     "date": "2026-02-17",
+     "type": "TRANSFER",
+     "amount_rwf": 84000,
+     "receiver": "250793116739",
+     "sender": "250790256787",
+     "fee_rwf": 0
+    },
+    {
+     "id": 182,
+     "date": "2026-02-17",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 183,
+     "date": "2026-02-18",
+     "type": "PAYMENT",
+     "amount_rwf": 4000,
+     "receiver": "23439167",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 184,
+     "date": "2026-02-18",
+     "type": "TRANSFER",
+     "amount_rwf": 500,
+     "receiver": "250790313118",
+     "sender": "250793116739",
+     "fee_rwf": 20
+    },
+    {
+     "id": 185,
+     "date": "2026-02-20",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 186,
+     "date": "2026-02-20",
+     "type": "PAYMENT",
+     "amount_rwf": 5100,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 187,
+     "date": "2026-02-21",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 188,
+     "date": "2026-02-23",
+     "type": "PAYMENT",
+     "amount_rwf": 5000,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 189,
+     "date": "2026-02-25",
+     "type": "PAYMENT",
+     "amount_rwf": 3100,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 190,
+     "date": "2026-02-27",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 191,
+     "date": "2026-02-27",
+     "type": "TRANSFER",
+     "amount_rwf": 4400,
+     "receiver": "250793116739",
+     "sender": "250792783826",
+     "fee_rwf": 0
+    },
+    {
+     "id": 192,
+     "date": "2026-02-28",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 193,
+     "date": "2026-02-28",
+     "type": "TRANSFER",
+     "amount_rwf": 7000,
+     "receiver": "250793116739",
+     "sender": "250792838722",
+     "fee_rwf": 0
+    },
+    {
+     "id": 194,
+     "date": "2026-03-01",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 195,
+     "date": "2026-03-01",
+     "type": "PAYMENT",
+     "amount_rwf": 3700,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 196,
+     "date": "2026-03-01",
+     "type": "TRANSFER",
+     "amount_rwf": 3700,
+     "receiver": "250790701364",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 197,
+     "date": "2026-03-02",
+     "type": "PAYMENT",
+     "amount_rwf": 7300,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 198,
+     "date": "2026-03-03",
+     "type": "PAYMENT",
+     "amount_rwf": 2100,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 199,
+     "date": "2026-03-03",
+     "type": "TRANSFER",
+     "amount_rwf": 6300,
+     "receiver": "250793116739",
+     "sender": "250791142291",
+     "fee_rwf": 0
+    },
+    {
+     "id": 200,
+     "date": "2026-03-04",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 201,
+     "date": "2026-03-05",
+     "type": "TRANSFER",
+     "amount_rwf": 42000,
+     "receiver": "250793116739",
+     "sender": "250788777572",
+     "fee_rwf": 0
+    },
+    {
+     "id": 202,
+     "date": "2026-03-06",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "23439167",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 203,
+     "date": "2026-03-08",
+     "type": "TRANSFER",
+     "amount_rwf": 3800,
+     "receiver": "250793173061",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 204,
+     "date": "2026-03-09",
+     "type": "TRANSFER",
+     "amount_rwf": 5000,
+     "receiver": "250789146316",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 205,
+     "date": "2026-03-09",
+     "type": "PAYMENT",
+     "amount_rwf": 6200,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 206,
+     "date": "2026-03-09",
+     "type": "TRANSFER",
+     "amount_rwf": 4300,
+     "receiver": "250789652483",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 207,
+     "date": "2026-03-11",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 208,
+     "date": "2026-03-11",
+     "type": "PAYMENT",
+     "amount_rwf": 30000,
+     "receiver": "44852685",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 209,
+     "date": "2026-03-12",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 210,
+     "date": "2026-03-14",
+     "type": "PAYMENT",
+     "amount_rwf": 3100,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 211,
+     "date": "2026-03-14",
+     "type": "TRANSFER",
+     "amount_rwf": 4900,
+     "receiver": "250788950983",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 212,
+     "date": "2026-03-16",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 213,
+     "date": "2026-03-16",
+     "type": "TRANSFER",
+     "amount_rwf": 3700,
+     "receiver": "250792591807",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 214,
+     "date": "2026-03-20",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 215,
+     "date": "2026-03-21",
+     "type": "PAYMENT",
+     "amount_rwf": 2300,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 216,
+     "date": "2026-04-01",
+     "type": "PAYMENT",
+     "amount_rwf": 1300,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 217,
+     "date": "2026-04-02",
+     "type": "TRANSFER",
+     "amount_rwf": 3200,
+     "receiver": "250790798207",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 218,
+     "date": "2026-04-03",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 219,
+     "date": "2026-04-03",
+     "type": "PAYMENT",
+     "amount_rwf": 4000,
+     "receiver": "23439167",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 220,
+     "date": "2026-04-03",
+     "type": "PAYMENT",
+     "amount_rwf": 7800,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 221,
+     "date": "2026-04-04",
+     "type": "TRANSFER",
+     "amount_rwf": 56000,
+     "receiver": "250793116739",
+     "sender": "250788777572",
+     "fee_rwf": 0
+    },
+    {
+     "id": 222,
+     "date": "2026-04-04",
+     "type": "PAYMENT",
+     "amount_rwf": 4000,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 223,
+     "date": "2026-04-05",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 224,
+     "date": "2026-04-05",
+     "type": "PAYMENT",
+     "amount_rwf": 5800,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 225,
+     "date": "2026-04-06",
+     "type": "TRANSFER",
+     "amount_rwf": 5000,
+     "receiver": "250789146316",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 226,
+     "date": "2026-04-06",
+     "type": "TRANSFER",
+     "amount_rwf": 3600,
+     "receiver": "250790788539",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 227,
+     "date": "2026-04-07",
+     "type": "TRANSFER",
+     "amount_rwf": 4000,
+     "receiver": "250790875467",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 228,
+     "date": "2026-04-08",
+     "type": "TRANSFER",
+     "amount_rwf": 2600,
+     "receiver": "250793116739",
+     "sender": "250788651517",
+     "fee_rwf": 0
+    },
+    {
+     "id": 229,
+     "date": "2026-04-09",
+     "type": "TRANSFER",
+     "amount_rwf": 1200,
+     "receiver": "250791020324",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 230,
+     "date": "2026-04-09",
+     "type": "TRANSFER",
+     "amount_rwf": 17000,
+     "receiver": "250793116739",
+     "sender": "250792091161",
+     "fee_rwf": 0
+    },
+    {
+     "id": 231,
+     "date": "2026-04-11",
+     "type": "TRANSFER",
+     "amount_rwf": 4900,
+     "receiver": "250788998160",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 232,
+     "date": "2026-04-13",
+     "type": "TRANSFER",
+     "amount_rwf": 3400,
+     "receiver": "250789681725",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 233,
+     "date": "2026-04-14",
+     "type": "PAYMENT",
+     "amount_rwf": 5500,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 234,
+     "date": "2026-04-15",
+     "type": "TRANSFER",
+     "amount_rwf": 1100,
+     "receiver": "250793042213",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 235,
+     "date": "2026-04-16",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 236,
+     "date": "2026-04-18",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 237,
+     "date": "2026-04-18",
+     "type": "PAYMENT",
+     "amount_rwf": 2200,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 238,
+     "date": "2026-04-20",
+     "type": "PAYMENT",
+     "amount_rwf": 29000,
+     "receiver": "42706266",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 239,
+     "date": "2026-04-23",
+     "type": "PAYMENT",
+     "amount_rwf": 4500,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 240,
+     "date": "2026-04-24",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 241,
+     "date": "2026-04-25",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 242,
+     "date": "2026-04-28",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 243,
+     "date": "2026-04-28",
+     "type": "PAYMENT",
+     "amount_rwf": 1300,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 244,
+     "date": "2026-05-02",
+     "type": "PAYMENT",
+     "amount_rwf": 3900,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 245,
+     "date": "2026-05-04",
+     "type": "PAYMENT",
+     "amount_rwf": 7400,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 246,
+     "date": "2026-05-04",
+     "type": "TRANSFER",
+     "amount_rwf": 5100,
+     "receiver": "250789487623",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 247,
+     "date": "2026-05-05",
+     "type": "TRANSFER",
+     "amount_rwf": 51000,
+     "receiver": "250793116739",
+     "sender": "250788777572",
+     "fee_rwf": 0
+    },
+    {
+     "id": 248,
+     "date": "2026-05-05",
+     "type": "TRANSFER",
+     "amount_rwf": 5000,
+     "receiver": "250789146316",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 249,
+     "date": "2026-05-05",
+     "type": "TRANSFER",
+     "amount_rwf": 2600,
+     "receiver": "250790175939",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 250,
+     "date": "2026-05-07",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 251,
+     "date": "2026-05-07",
+     "type": "PAYMENT",
+     "amount_rwf": 5600,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 252,
+     "date": "2026-05-08",
+     "type": "PAYMENT",
+     "amount_rwf": 4300,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 253,
+     "date": "2026-05-08",
+     "type": "TRANSFER",
+     "amount_rwf": 5500,
+     "receiver": "250792784256",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 254,
+     "date": "2026-05-10",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 255,
+     "date": "2026-05-12",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 256,
+     "date": "2026-05-12",
+     "type": "PAYMENT",
+     "amount_rwf": 6100,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 257,
+     "date": "2026-05-13",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 258,
+     "date": "2026-05-16",
+     "type": "TRANSFER",
+     "amount_rwf": 1400,
+     "receiver": "250789326147",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 259,
+     "date": "2026-05-18",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 260,
+     "date": "2026-05-18",
+     "type": "PAYMENT",
+     "amount_rwf": 2500,
+     "receiver": "23439167",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 261,
+     "date": "2026-05-19",
+     "type": "TRANSFER",
+     "amount_rwf": 4100,
+     "receiver": "250793116739",
+     "sender": "250791987203",
+     "fee_rwf": 0
+    },
+    {
+     "id": 262,
+     "date": "2026-05-22",
+     "type": "PAYMENT",
+     "amount_rwf": 7100,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 263,
+     "date": "2026-05-22",
+     "type": "TRANSFER",
+     "amount_rwf": 1400,
+     "receiver": "250792026925",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 264,
+     "date": "2026-05-22",
+     "type": "TRANSFER",
+     "amount_rwf": 6900,
+     "receiver": "250793116739",
+     "sender": "250789079688",
+     "fee_rwf": 0
+    },
+    {
+     "id": 265,
+     "date": "2026-05-23",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 266,
+     "date": "2026-05-24",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 267,
+     "date": "2026-05-25",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 268,
+     "date": "2026-05-26",
+     "type": "PAYMENT",
+     "amount_rwf": 2300,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 269,
+     "date": "2026-05-28",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 270,
+     "date": "2026-05-28",
+     "type": "PAYMENT",
+     "amount_rwf": 2900,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 271,
+     "date": "2026-06-01",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 272,
+     "date": "2026-06-01",
+     "type": "PAYMENT",
+     "amount_rwf": 7400,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 273,
+     "date": "2026-06-02",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 274,
+     "date": "2026-06-03",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 275,
+     "date": "2026-06-04",
+     "type": "TRANSFER",
+     "amount_rwf": 49000,
+     "receiver": "250793116739",
+     "sender": "250788777572",
+     "fee_rwf": 0
+    },
+    {
+     "id": 276,
+     "date": "2026-06-04",
+     "type": "TRANSFER",
+     "amount_rwf": 5400,
+     "receiver": "250788834904",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 277,
+     "date": "2026-06-05",
+     "type": "TRANSFER",
+     "amount_rwf": 5000,
+     "receiver": "250789146316",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 278,
+     "date": "2026-06-06",
+     "type": "PAYMENT",
+     "amount_rwf": 4400,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 279,
+     "date": "2026-06-08",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 280,
+     "date": "2026-06-08",
+     "type": "TRANSFER",
+     "amount_rwf": 11000,
+     "receiver": "250793116739",
+     "sender": "250792091161",
+     "fee_rwf": 0
+    },
+    {
+     "id": 281,
+     "date": "2026-06-10",
+     "type": "TRANSFER",
+     "amount_rwf": 5100,
+     "receiver": "250788364069",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 282,
+     "date": "2026-06-11",
+     "type": "PAYMENT",
+     "amount_rwf": 7600,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 283,
+     "date": "2026-06-13",
+     "type": "TRANSFER",
+     "amount_rwf": 43000,
+     "receiver": "250793116739",
+     "sender": "250790256787",
+     "fee_rwf": 0
+    },
+    {
+     "id": 284,
+     "date": "2026-06-14",
+     "type": "PAYMENT",
+     "amount_rwf": 6500,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 285,
+     "date": "2026-06-16",
+     "type": "TRANSFER",
+     "amount_rwf": 1900,
+     "receiver": "250793116739",
+     "sender": "250791379781",
+     "fee_rwf": 0
+    },
+    {
+     "id": 286,
+     "date": "2026-06-18",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "23439167",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 287,
+     "date": "2026-06-19",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 288,
+     "date": "2026-06-21",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 289,
+     "date": "2026-06-23",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 290,
+     "date": "2026-06-23",
+     "type": "TRANSFER",
+     "amount_rwf": 4900,
+     "receiver": "250791693655",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 291,
+     "date": "2026-06-25",
+     "type": "TRANSFER",
+     "amount_rwf": 3500,
+     "receiver": "250788530538",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 292,
+     "date": "2026-06-26",
+     "type": "PAYMENT",
+     "amount_rwf": 7000,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 293,
+     "date": "2026-06-27",
+     "type": "PAYMENT",
+     "amount_rwf": 7600,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 294,
+     "date": "2026-06-27",
+     "type": "TRANSFER",
+     "amount_rwf": 6200,
+     "receiver": "250793116739",
+     "sender": "250791741666",
+     "fee_rwf": 0
+    },
+    {
+     "id": 295,
+     "date": "2026-06-28",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 296,
+     "date": "2026-06-28",
+     "type": "TRANSFER",
+     "amount_rwf": 5800,
+     "receiver": "250790013266",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 297,
+     "date": "2026-07-02",
+     "type": "PAYMENT",
+     "amount_rwf": 2600,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 298,
+     "date": "2026-07-04",
+     "type": "PAYMENT",
+     "amount_rwf": 7700,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 299,
+     "date": "2026-07-05",
+     "type": "TRANSFER",
+     "amount_rwf": 45000,
+     "receiver": "250793116739",
+     "sender": "250788777572",
+     "fee_rwf": 0
+    },
+    {
+     "id": 300,
+     "date": "2026-07-05",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 301,
+     "date": "2026-07-06",
+     "type": "TRANSFER",
+     "amount_rwf": 5000,
+     "receiver": "250789146316",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 302,
+     "date": "2026-07-06",
+     "type": "PAYMENT",
+     "amount_rwf": 4800,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 303,
+     "date": "2026-07-06",
+     "type": "TRANSFER",
+     "amount_rwf": 2700,
+     "receiver": "250792847458",
+     "sender": "250793116739",
+     "fee_rwf": 100
+    },
+    {
+     "id": 304,
+     "date": "2026-07-07",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 305,
+     "date": "2026-07-08",
+     "type": "PAYMENT",
+     "amount_rwf": 3900,
+     "receiver": "49936578",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    },
+    {
+     "id": 306,
+     "date": "2026-07-09",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44711873",
+     "sender": "250793116739",
+     "fee_rwf": 0
+    }
+   ]
+  },
+  {
+   "farmer_id": "F002",
+   "name": "Nkurunziza Emmanuel",
+   "msisdn": "250793397399",
+   "district": "Huye",
+   "primary_activity": "Coffee + beans",
+   "profile_hint": "seasonal but disciplined \u2014 big Mar-Jul inflows, never misses ibimina",
+   "counterparty_legend": {
+    "250790030094": "Coffee washing station \u2014 cherry payments Mar-Jul",
+    "250791892288": "Local buyer \u2014 small off-season sales",
+    "250790190672": "Ibimina savings group \u2014 fixed RWF 3,000 monthly",
+    "36359461": "Airtime top-up",
+    "27117561": "Cash Power electricity",
+    "31905950": "School fees",
+    "46770811": "Agro-dealer",
+    "28668868": "Local shop"
+   },
+   "n_transactions": 228,
+   "transactions": [
+    {
+     "id": 1,
+     "date": "2025-07-12",
+     "type": "TRANSFER",
+     "amount_rwf": 5800,
+     "receiver": "250793397399",
+     "sender": "250790669975",
+     "fee_rwf": 0
+    },
+    {
+     "id": 2,
+     "date": "2025-07-18",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 3,
+     "date": "2025-07-18",
+     "type": "PAYMENT",
+     "amount_rwf": 3200,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 4,
+     "date": "2025-07-22",
+     "type": "TRANSFER",
+     "amount_rwf": 4300,
+     "receiver": "250790710526",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 5,
+     "date": "2025-07-23",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 6,
+     "date": "2025-07-26",
+     "type": "TRANSFER",
+     "amount_rwf": 5000,
+     "receiver": "250789077449",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 7,
+     "date": "2025-08-01",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 8,
+     "date": "2025-08-01",
+     "type": "PAYMENT",
+     "amount_rwf": 2100,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 9,
+     "date": "2025-08-04",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 10,
+     "date": "2025-08-04",
+     "type": "PAYMENT",
+     "amount_rwf": 3300,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 11,
+     "date": "2025-08-08",
+     "type": "PAYMENT",
+     "amount_rwf": 5300,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 12,
+     "date": "2025-08-09",
+     "type": "TRANSFER",
+     "amount_rwf": 3000,
+     "receiver": "250790190672",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 13,
+     "date": "2025-08-09",
+     "type": "TRANSFER",
+     "amount_rwf": 3000,
+     "receiver": "250789403380",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 14,
+     "date": "2025-08-10",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 15,
+     "date": "2025-08-15",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 16,
+     "date": "2025-08-15",
+     "type": "TRANSFER",
+     "amount_rwf": 4500,
+     "receiver": "250788248728",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 17,
+     "date": "2025-08-16",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 18,
+     "date": "2025-08-16",
+     "type": "PAYMENT",
+     "amount_rwf": 900,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 19,
+     "date": "2025-08-19",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 20,
+     "date": "2025-08-19",
+     "type": "PAYMENT",
+     "amount_rwf": 2500,
+     "receiver": "27117561",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 21,
+     "date": "2025-08-20",
+     "type": "TRANSFER",
+     "amount_rwf": 10000,
+     "receiver": "250793397399",
+     "sender": "250791892288",
+     "fee_rwf": 0
+    },
+    {
+     "id": 22,
+     "date": "2025-08-20",
+     "type": "PAYMENT",
+     "amount_rwf": 5300,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 23,
+     "date": "2025-08-21",
+     "type": "PAYMENT",
+     "amount_rwf": 4100,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 24,
+     "date": "2025-08-23",
+     "type": "TRANSFER",
+     "amount_rwf": 14000,
+     "receiver": "250793397399",
+     "sender": "250791892288",
+     "fee_rwf": 0
+    },
+    {
+     "id": 25,
+     "date": "2025-08-23",
+     "type": "PAYMENT",
+     "amount_rwf": 1600,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 26,
+     "date": "2025-08-23",
+     "type": "TRANSFER",
+     "amount_rwf": 3600,
+     "receiver": "250792376395",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 27,
+     "date": "2025-08-23",
+     "type": "TRANSFER",
+     "amount_rwf": 3400,
+     "receiver": "250793397399",
+     "sender": "250788870357",
+     "fee_rwf": 0
+    },
+    {
+     "id": 28,
+     "date": "2025-08-24",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 29,
+     "date": "2025-09-01",
+     "type": "TRANSFER",
+     "amount_rwf": 900,
+     "receiver": "250792781369",
+     "sender": "250793397399",
+     "fee_rwf": 20
+    },
+    {
+     "id": 30,
+     "date": "2025-09-03",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 31,
+     "date": "2025-09-04",
+     "type": "PAYMENT",
+     "amount_rwf": 4900,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 32,
+     "date": "2025-09-05",
+     "type": "PAYMENT",
+     "amount_rwf": 3200,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 33,
+     "date": "2025-09-09",
+     "type": "TRANSFER",
+     "amount_rwf": 3000,
+     "receiver": "250790190672",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 34,
+     "date": "2025-09-09",
+     "type": "TRANSFER",
+     "amount_rwf": 4600,
+     "receiver": "250790813423",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 35,
+     "date": "2025-09-13",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 36,
+     "date": "2025-09-13",
+     "type": "TRANSFER",
+     "amount_rwf": 2400,
+     "receiver": "250792840886",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 37,
+     "date": "2025-09-15",
+     "type": "PAYMENT",
+     "amount_rwf": 5000,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 38,
+     "date": "2025-09-16",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 39,
+     "date": "2025-09-16",
+     "type": "PAYMENT",
+     "amount_rwf": 3500,
+     "receiver": "27117561",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 40,
+     "date": "2025-09-17",
+     "type": "TRANSFER",
+     "amount_rwf": 8000,
+     "receiver": "250793397399",
+     "sender": "250791892288",
+     "fee_rwf": 0
+    },
+    {
+     "id": 41,
+     "date": "2025-09-18",
+     "type": "PAYMENT",
+     "amount_rwf": 19000,
+     "receiver": "31905950",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 42,
+     "date": "2025-09-18",
+     "type": "PAYMENT",
+     "amount_rwf": 20000,
+     "receiver": "46770811",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 43,
+     "date": "2025-09-19",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 44,
+     "date": "2025-09-19",
+     "type": "TRANSFER",
+     "amount_rwf": 3400,
+     "receiver": "250789667542",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 45,
+     "date": "2025-09-21",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 46,
+     "date": "2025-09-27",
+     "type": "PAYMENT",
+     "amount_rwf": 4200,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 47,
+     "date": "2025-10-03",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 48,
+     "date": "2025-10-05",
+     "type": "PAYMENT",
+     "amount_rwf": 5700,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 49,
+     "date": "2025-10-07",
+     "type": "PAYMENT",
+     "amount_rwf": 5000,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 50,
+     "date": "2025-10-08",
+     "type": "TRANSFER",
+     "amount_rwf": 12000,
+     "receiver": "250793397399",
+     "sender": "250791892288",
+     "fee_rwf": 0
+    },
+    {
+     "id": 51,
+     "date": "2025-10-08",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 52,
+     "date": "2025-10-08",
+     "type": "PAYMENT",
+     "amount_rwf": 1900,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 53,
+     "date": "2025-10-09",
+     "type": "TRANSFER",
+     "amount_rwf": 3000,
+     "receiver": "250790190672",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 54,
+     "date": "2025-10-09",
+     "type": "TRANSFER",
+     "amount_rwf": 5900,
+     "receiver": "250793879060",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 55,
+     "date": "2025-10-10",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 56,
+     "date": "2025-10-12",
+     "type": "PAYMENT",
+     "amount_rwf": 2500,
+     "receiver": "27117561",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 57,
+     "date": "2025-10-13",
+     "type": "PAYMENT",
+     "amount_rwf": 1400,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 58,
+     "date": "2025-10-15",
+     "type": "PAYMENT",
+     "amount_rwf": 3100,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 59,
+     "date": "2025-10-16",
+     "type": "PAYMENT",
+     "amount_rwf": 4200,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 60,
+     "date": "2025-10-18",
+     "type": "PAYMENT",
+     "amount_rwf": 3600,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 61,
+     "date": "2025-10-19",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 62,
+     "date": "2025-10-22",
+     "type": "TRANSFER",
+     "amount_rwf": 1600,
+     "receiver": "250793101883",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 63,
+     "date": "2025-10-24",
+     "type": "TRANSFER",
+     "amount_rwf": 5600,
+     "receiver": "250793041337",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 64,
+     "date": "2025-10-24",
+     "type": "TRANSFER",
+     "amount_rwf": 2100,
+     "receiver": "250793397399",
+     "sender": "250788953813",
+     "fee_rwf": 0
+    },
+    {
+     "id": 65,
+     "date": "2025-10-25",
+     "type": "TRANSFER",
+     "amount_rwf": 3000,
+     "receiver": "250791034985",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 66,
+     "date": "2025-10-26",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 67,
+     "date": "2025-11-01",
+     "type": "PAYMENT",
+     "amount_rwf": 5600,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 68,
+     "date": "2025-11-07",
+     "type": "TRANSFER",
+     "amount_rwf": 3000,
+     "receiver": "250790190672",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 69,
+     "date": "2025-11-10",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 70,
+     "date": "2025-11-10",
+     "type": "PAYMENT",
+     "amount_rwf": 4800,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 71,
+     "date": "2025-11-11",
+     "type": "TRANSFER",
+     "amount_rwf": 1900,
+     "receiver": "250789138579",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 72,
+     "date": "2025-11-13",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 73,
+     "date": "2025-11-14",
+     "type": "TRANSFER",
+     "amount_rwf": 4900,
+     "receiver": "250790556639",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 74,
+     "date": "2025-11-15",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 75,
+     "date": "2025-11-17",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 76,
+     "date": "2025-11-18",
+     "type": "TRANSFER",
+     "amount_rwf": 9000,
+     "receiver": "250793397399",
+     "sender": "250791892288",
+     "fee_rwf": 0
+    },
+    {
+     "id": 77,
+     "date": "2025-11-19",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 78,
+     "date": "2025-11-22",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "27117561",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 79,
+     "date": "2025-11-24",
+     "type": "PAYMENT",
+     "amount_rwf": 4500,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 80,
+     "date": "2025-11-24",
+     "type": "TRANSFER",
+     "amount_rwf": 4600,
+     "receiver": "250790870813",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 81,
+     "date": "2025-11-25",
+     "type": "TRANSFER",
+     "amount_rwf": 13000,
+     "receiver": "250793397399",
+     "sender": "250791892288",
+     "fee_rwf": 0
+    },
+    {
+     "id": 82,
+     "date": "2025-11-25",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 83,
+     "date": "2025-11-26",
+     "type": "PAYMENT",
+     "amount_rwf": 5200,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 84,
+     "date": "2025-11-27",
+     "type": "PAYMENT",
+     "amount_rwf": 4800,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 85,
+     "date": "2025-12-04",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 86,
+     "date": "2025-12-05",
+     "type": "TRANSFER",
+     "amount_rwf": 3000,
+     "receiver": "250790190672",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 87,
+     "date": "2025-12-11",
+     "type": "PAYMENT",
+     "amount_rwf": 2500,
+     "receiver": "27117561",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 88,
+     "date": "2025-12-11",
+     "type": "PAYMENT",
+     "amount_rwf": 3400,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 89,
+     "date": "2025-12-13",
+     "type": "PAYMENT",
+     "amount_rwf": 2300,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 90,
+     "date": "2025-12-15",
+     "type": "TRANSFER",
+     "amount_rwf": 5000,
+     "receiver": "250793397399",
+     "sender": "250791892288",
+     "fee_rwf": 0
+    },
+    {
+     "id": 91,
+     "date": "2025-12-15",
+     "type": "PAYMENT",
+     "amount_rwf": 2800,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 92,
+     "date": "2025-12-16",
+     "type": "TRANSFER",
+     "amount_rwf": 2900,
+     "receiver": "250793912677",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 93,
+     "date": "2025-12-18",
+     "type": "PAYMENT",
+     "amount_rwf": 5500,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 94,
+     "date": "2025-12-20",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 95,
+     "date": "2025-12-24",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 96,
+     "date": "2025-12-25",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 97,
+     "date": "2025-12-25",
+     "type": "PAYMENT",
+     "amount_rwf": 3900,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 98,
+     "date": "2025-12-26",
+     "type": "TRANSFER",
+     "amount_rwf": 7000,
+     "receiver": "250793397399",
+     "sender": "250791892288",
+     "fee_rwf": 0
+    },
+    {
+     "id": 99,
+     "date": "2025-12-26",
+     "type": "TRANSFER",
+     "amount_rwf": 3300,
+     "receiver": "250788491081",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 100,
+     "date": "2025-12-27",
+     "type": "PAYMENT",
+     "amount_rwf": 2700,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 101,
+     "date": "2025-12-27",
+     "type": "TRANSFER",
+     "amount_rwf": 1100,
+     "receiver": "250789790785",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 102,
+     "date": "2026-01-02",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 103,
+     "date": "2026-01-03",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 104,
+     "date": "2026-01-06",
+     "type": "TRANSFER",
+     "amount_rwf": 3000,
+     "receiver": "250790190672",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 105,
+     "date": "2026-01-06",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 106,
+     "date": "2026-01-08",
+     "type": "TRANSFER",
+     "amount_rwf": 9000,
+     "receiver": "250793397399",
+     "sender": "250791892288",
+     "fee_rwf": 0
+    },
+    {
+     "id": 107,
+     "date": "2026-01-08",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 108,
+     "date": "2026-01-10",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "27117561",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 109,
+     "date": "2026-01-11",
+     "type": "PAYMENT",
+     "amount_rwf": 26000,
+     "receiver": "31905950",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 110,
+     "date": "2026-01-11",
+     "type": "PAYMENT",
+     "amount_rwf": 4900,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 111,
+     "date": "2026-01-13",
+     "type": "TRANSFER",
+     "amount_rwf": 10000,
+     "receiver": "250793397399",
+     "sender": "250791892288",
+     "fee_rwf": 0
+    },
+    {
+     "id": 112,
+     "date": "2026-01-13",
+     "type": "PAYMENT",
+     "amount_rwf": 1100,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 113,
+     "date": "2026-01-13",
+     "type": "TRANSFER",
+     "amount_rwf": 5100,
+     "receiver": "250790094689",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 114,
+     "date": "2026-01-16",
+     "type": "PAYMENT",
+     "amount_rwf": 1800,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 115,
+     "date": "2026-01-18",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 116,
+     "date": "2026-01-19",
+     "type": "TRANSFER",
+     "amount_rwf": 4100,
+     "receiver": "250793397399",
+     "sender": "250793985967",
+     "fee_rwf": 0
+    },
+    {
+     "id": 117,
+     "date": "2026-01-22",
+     "type": "TRANSFER",
+     "amount_rwf": 3700,
+     "receiver": "250788277304",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 118,
+     "date": "2026-01-23",
+     "type": "PAYMENT",
+     "amount_rwf": 4900,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 119,
+     "date": "2026-01-24",
+     "type": "PAYMENT",
+     "amount_rwf": 5600,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 120,
+     "date": "2026-01-24",
+     "type": "TRANSFER",
+     "amount_rwf": 4900,
+     "receiver": "250788476877",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 121,
+     "date": "2026-01-26",
+     "type": "PAYMENT",
+     "amount_rwf": 3500,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 122,
+     "date": "2026-01-28",
+     "type": "TRANSFER",
+     "amount_rwf": 3500,
+     "receiver": "250793785395",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 123,
+     "date": "2026-02-02",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 124,
+     "date": "2026-02-04",
+     "type": "PAYMENT",
+     "amount_rwf": 4500,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 125,
+     "date": "2026-02-04",
+     "type": "TRANSFER",
+     "amount_rwf": 4400,
+     "receiver": "250788649641",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 126,
+     "date": "2026-02-07",
+     "type": "TRANSFER",
+     "amount_rwf": 3000,
+     "receiver": "250790190672",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 127,
+     "date": "2026-02-08",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 128,
+     "date": "2026-02-08",
+     "type": "TRANSFER",
+     "amount_rwf": 5100,
+     "receiver": "250790959715",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 129,
+     "date": "2026-02-10",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 130,
+     "date": "2026-02-15",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 131,
+     "date": "2026-02-15",
+     "type": "PAYMENT",
+     "amount_rwf": 900,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 132,
+     "date": "2026-02-16",
+     "type": "TRANSFER",
+     "amount_rwf": 14000,
+     "receiver": "250793397399",
+     "sender": "250791892288",
+     "fee_rwf": 0
+    },
+    {
+     "id": 133,
+     "date": "2026-02-17",
+     "type": "PAYMENT",
+     "amount_rwf": 22000,
+     "receiver": "46770811",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 134,
+     "date": "2026-02-17",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 135,
+     "date": "2026-02-18",
+     "type": "TRANSFER",
+     "amount_rwf": 11000,
+     "receiver": "250793397399",
+     "sender": "250791892288",
+     "fee_rwf": 0
+    },
+    {
+     "id": 136,
+     "date": "2026-02-22",
+     "type": "TRANSFER",
+     "amount_rwf": 5500,
+     "receiver": "250789679112",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 137,
+     "date": "2026-02-23",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 138,
+     "date": "2026-02-25",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 139,
+     "date": "2026-02-27",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "27117561",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 140,
+     "date": "2026-02-28",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 141,
+     "date": "2026-02-28",
+     "type": "PAYMENT",
+     "amount_rwf": 4200,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 142,
+     "date": "2026-03-03",
+     "type": "PAYMENT",
+     "amount_rwf": 5900,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 143,
+     "date": "2026-03-04",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 144,
+     "date": "2026-03-06",
+     "type": "TRANSFER",
+     "amount_rwf": 3000,
+     "receiver": "250790190672",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 145,
+     "date": "2026-03-08",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 146,
+     "date": "2026-03-09",
+     "type": "PAYMENT",
+     "amount_rwf": 4100,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 147,
+     "date": "2026-03-10",
+     "type": "TRANSFER",
+     "amount_rwf": 5800,
+     "receiver": "250791122343",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 148,
+     "date": "2026-03-11",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 149,
+     "date": "2026-03-14",
+     "type": "TRANSFER",
+     "amount_rwf": 102000,
+     "receiver": "250793397399",
+     "sender": "250790030094",
+     "fee_rwf": 0
+    },
+    {
+     "id": 150,
+     "date": "2026-03-14",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 151,
+     "date": "2026-03-15",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "27117561",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 152,
+     "date": "2026-03-15",
+     "type": "TRANSFER",
+     "amount_rwf": 1600,
+     "receiver": "250788992227",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 153,
+     "date": "2026-03-16",
+     "type": "PAYMENT",
+     "amount_rwf": 3500,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 154,
+     "date": "2026-03-18",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 155,
+     "date": "2026-03-21",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 156,
+     "date": "2026-03-23",
+     "type": "TRANSFER",
+     "amount_rwf": 800,
+     "receiver": "250790516554",
+     "sender": "250793397399",
+     "fee_rwf": 20
+    },
+    {
+     "id": 157,
+     "date": "2026-03-24",
+     "type": "TRANSFER",
+     "amount_rwf": 73000,
+     "receiver": "250793397399",
+     "sender": "250790030094",
+     "fee_rwf": 0
+    },
+    {
+     "id": 158,
+     "date": "2026-03-26",
+     "type": "PAYMENT",
+     "amount_rwf": 5200,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 159,
+     "date": "2026-03-27",
+     "type": "TRANSFER",
+     "amount_rwf": 1500,
+     "receiver": "250788246205",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 160,
+     "date": "2026-04-02",
+     "type": "PAYMENT",
+     "amount_rwf": 5900,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 161,
+     "date": "2026-04-06",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 162,
+     "date": "2026-04-07",
+     "type": "TRANSFER",
+     "amount_rwf": 3000,
+     "receiver": "250790190672",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 163,
+     "date": "2026-04-09",
+     "type": "TRANSFER",
+     "amount_rwf": 1300,
+     "receiver": "250793397399",
+     "sender": "250793388528",
+     "fee_rwf": 0
+    },
+    {
+     "id": 164,
+     "date": "2026-04-10",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 165,
+     "date": "2026-04-11",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "27117561",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 166,
+     "date": "2026-04-11",
+     "type": "PAYMENT",
+     "amount_rwf": 1400,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 167,
+     "date": "2026-04-12",
+     "type": "TRANSFER",
+     "amount_rwf": 66000,
+     "receiver": "250793397399",
+     "sender": "250790030094",
+     "fee_rwf": 0
+    },
+    {
+     "id": 168,
+     "date": "2026-04-12",
+     "type": "TRANSFER",
+     "amount_rwf": 4900,
+     "receiver": "250791615870",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 169,
+     "date": "2026-04-15",
+     "type": "TRANSFER",
+     "amount_rwf": 70000,
+     "receiver": "250793397399",
+     "sender": "250790030094",
+     "fee_rwf": 0
+    },
+    {
+     "id": 170,
+     "date": "2026-04-15",
+     "type": "TRANSFER",
+     "amount_rwf": 1800,
+     "receiver": "250791686735",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 171,
+     "date": "2026-04-16",
+     "type": "PAYMENT",
+     "amount_rwf": 28000,
+     "receiver": "31905950",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 172,
+     "date": "2026-04-16",
+     "type": "PAYMENT",
+     "amount_rwf": 2700,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 173,
+     "date": "2026-04-18",
+     "type": "PAYMENT",
+     "amount_rwf": 6000,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 174,
+     "date": "2026-04-20",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 175,
+     "date": "2026-04-21",
+     "type": "PAYMENT",
+     "amount_rwf": 3200,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 176,
+     "date": "2026-04-22",
+     "type": "TRANSFER",
+     "amount_rwf": 1300,
+     "receiver": "250791645558",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 177,
+     "date": "2026-04-23",
+     "type": "TRANSFER",
+     "amount_rwf": 63000,
+     "receiver": "250793397399",
+     "sender": "250790030094",
+     "fee_rwf": 0
+    },
+    {
+     "id": 178,
+     "date": "2026-04-23",
+     "type": "PAYMENT",
+     "amount_rwf": 2700,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 179,
+     "date": "2026-04-25",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 180,
+     "date": "2026-04-26",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 181,
+     "date": "2026-05-02",
+     "type": "TRANSFER",
+     "amount_rwf": 4300,
+     "receiver": "250793397399",
+     "sender": "250790199028",
+     "fee_rwf": 0
+    },
+    {
+     "id": 182,
+     "date": "2026-05-04",
+     "type": "TRANSFER",
+     "amount_rwf": 55000,
+     "receiver": "250793397399",
+     "sender": "250790030094",
+     "fee_rwf": 0
+    },
+    {
+     "id": 183,
+     "date": "2026-05-04",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 184,
+     "date": "2026-05-04",
+     "type": "PAYMENT",
+     "amount_rwf": 3300,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 185,
+     "date": "2026-05-06",
+     "type": "TRANSFER",
+     "amount_rwf": 3000,
+     "receiver": "250790190672",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 186,
+     "date": "2026-05-06",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 187,
+     "date": "2026-05-08",
+     "type": "TRANSFER",
+     "amount_rwf": 71000,
+     "receiver": "250793397399",
+     "sender": "250790030094",
+     "fee_rwf": 0
+    },
+    {
+     "id": 188,
+     "date": "2026-05-08",
+     "type": "TRANSFER",
+     "amount_rwf": 3500,
+     "receiver": "250788718987",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 189,
+     "date": "2026-05-09",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 190,
+     "date": "2026-05-10",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 191,
+     "date": "2026-05-13",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 192,
+     "date": "2026-05-13",
+     "type": "PAYMENT",
+     "amount_rwf": 3500,
+     "receiver": "27117561",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 193,
+     "date": "2026-05-15",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 194,
+     "date": "2026-05-15",
+     "type": "PAYMENT",
+     "amount_rwf": 1200,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 195,
+     "date": "2026-05-15",
+     "type": "TRANSFER",
+     "amount_rwf": 3500,
+     "receiver": "250792945497",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 196,
+     "date": "2026-05-21",
+     "type": "PAYMENT",
+     "amount_rwf": 3500,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 197,
+     "date": "2026-05-23",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 198,
+     "date": "2026-05-23",
+     "type": "PAYMENT",
+     "amount_rwf": 1300,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 199,
+     "date": "2026-05-24",
+     "type": "TRANSFER",
+     "amount_rwf": 46000,
+     "receiver": "250793397399",
+     "sender": "250790030094",
+     "fee_rwf": 0
+    },
+    {
+     "id": 200,
+     "date": "2026-05-25",
+     "type": "PAYMENT",
+     "amount_rwf": 3200,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 201,
+     "date": "2026-05-26",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 202,
+     "date": "2026-05-28",
+     "type": "PAYMENT",
+     "amount_rwf": 3700,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 203,
+     "date": "2026-06-01",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 204,
+     "date": "2026-06-01",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "27117561",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 205,
+     "date": "2026-06-03",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 206,
+     "date": "2026-06-05",
+     "type": "PAYMENT",
+     "amount_rwf": 2300,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 207,
+     "date": "2026-06-07",
+     "type": "TRANSFER",
+     "amount_rwf": 3000,
+     "receiver": "250790190672",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 208,
+     "date": "2026-06-08",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 209,
+     "date": "2026-06-08",
+     "type": "PAYMENT",
+     "amount_rwf": 2200,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 210,
+     "date": "2026-06-09",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 211,
+     "date": "2026-06-11",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 212,
+     "date": "2026-06-14",
+     "type": "PAYMENT",
+     "amount_rwf": 2200,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 213,
+     "date": "2026-06-17",
+     "type": "PAYMENT",
+     "amount_rwf": 1400,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 214,
+     "date": "2026-06-18",
+     "type": "TRANSFER",
+     "amount_rwf": 54000,
+     "receiver": "250793397399",
+     "sender": "250790030094",
+     "fee_rwf": 0
+    },
+    {
+     "id": 215,
+     "date": "2026-06-19",
+     "type": "PAYMENT",
+     "amount_rwf": 5800,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 216,
+     "date": "2026-06-20",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 217,
+     "date": "2026-06-24",
+     "type": "TRANSFER",
+     "amount_rwf": 55000,
+     "receiver": "250793397399",
+     "sender": "250790030094",
+     "fee_rwf": 0
+    },
+    {
+     "id": 218,
+     "date": "2026-06-24",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 219,
+     "date": "2026-06-27",
+     "type": "TRANSFER",
+     "amount_rwf": 4200,
+     "receiver": "250788694963",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 220,
+     "date": "2026-06-28",
+     "type": "PAYMENT",
+     "amount_rwf": 3900,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 221,
+     "date": "2026-06-28",
+     "type": "TRANSFER",
+     "amount_rwf": 2200,
+     "receiver": "250793670556",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 222,
+     "date": "2026-07-02",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 223,
+     "date": "2026-07-05",
+     "type": "TRANSFER",
+     "amount_rwf": 3000,
+     "receiver": "250790190672",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    },
+    {
+     "id": 224,
+     "date": "2026-07-05",
+     "type": "PAYMENT",
+     "amount_rwf": 2900,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 225,
+     "date": "2026-07-06",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "36359461",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 226,
+     "date": "2026-07-07",
+     "type": "TRANSFER",
+     "amount_rwf": 57000,
+     "receiver": "250793397399",
+     "sender": "250790030094",
+     "fee_rwf": 0
+    },
+    {
+     "id": 227,
+     "date": "2026-07-08",
+     "type": "PAYMENT",
+     "amount_rwf": 4600,
+     "receiver": "28668868",
+     "sender": "250793397399",
+     "fee_rwf": 0
+    },
+    {
+     "id": 228,
+     "date": "2026-07-11",
+     "type": "TRANSFER",
+     "amount_rwf": 2500,
+     "receiver": "250789825206",
+     "sender": "250793397399",
+     "fee_rwf": 100
+    }
+   ]
+  },
+  {
+   "farmer_id": "F003",
+   "name": "Uwase Claudine",
+   "msisdn": "250788870127",
+   "district": "Musanze",
+   "primary_activity": "Vegetables (market gardening)",
+   "profile_hint": "frequent small sales, mostly steady but skips some savings months \u2014 MEDIUM",
+   "counterparty_legend": {
+    "250792217220": "Market trader A",
+    "250792226441": "Market trader B",
+    "250789344519": "Market trader C",
+    "250789826952": "Ibimina savings group \u2014 RWF 4,000, skipped 3 months",
+    "39997825": "Airtime",
+    "20095145": "Cash Power",
+    "29303799": "School fees",
+    "48803329": "Local shop",
+    "24854922": "Agro-dealer"
+   },
+   "n_transactions": 298,
+   "transactions": [
+    {
+     "id": 1,
+     "date": "2025-07-12",
+     "type": "PAYMENT",
+     "amount_rwf": 1900,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 2,
+     "date": "2025-07-12",
+     "type": "TRANSFER",
+     "amount_rwf": 7500,
+     "receiver": "250788870127",
+     "sender": "250788361551",
+     "fee_rwf": 0
+    },
+    {
+     "id": 3,
+     "date": "2025-07-13",
+     "type": "PAYMENT",
+     "amount_rwf": 5700,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 4,
+     "date": "2025-07-13",
+     "type": "TRANSFER",
+     "amount_rwf": 4400,
+     "receiver": "250788666549",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 5,
+     "date": "2025-07-18",
+     "type": "TRANSFER",
+     "amount_rwf": 13700,
+     "receiver": "250788870127",
+     "sender": "250792217220",
+     "fee_rwf": 0
+    },
+    {
+     "id": 6,
+     "date": "2025-07-19",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 7,
+     "date": "2025-07-20",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 8,
+     "date": "2025-07-21",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 9,
+     "date": "2025-07-22",
+     "type": "PAYMENT",
+     "amount_rwf": 3300,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 10,
+     "date": "2025-07-23",
+     "type": "PAYMENT",
+     "amount_rwf": 5400,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 11,
+     "date": "2025-07-24",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 12,
+     "date": "2025-07-25",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 13,
+     "date": "2025-07-26",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "20095145",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 14,
+     "date": "2025-07-28",
+     "type": "TRANSFER",
+     "amount_rwf": 3700,
+     "receiver": "250790265971",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 15,
+     "date": "2025-08-01",
+     "type": "TRANSFER",
+     "amount_rwf": 19700,
+     "receiver": "250788870127",
+     "sender": "250792217220",
+     "fee_rwf": 0
+    },
+    {
+     "id": 16,
+     "date": "2025-08-03",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 17,
+     "date": "2025-08-05",
+     "type": "TRANSFER",
+     "amount_rwf": 18600,
+     "receiver": "250788870127",
+     "sender": "250792217220",
+     "fee_rwf": 0
+    },
+    {
+     "id": 18,
+     "date": "2025-08-05",
+     "type": "PAYMENT",
+     "amount_rwf": 1600,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 19,
+     "date": "2025-08-09",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 20,
+     "date": "2025-08-11",
+     "type": "PAYMENT",
+     "amount_rwf": 4300,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 21,
+     "date": "2025-08-14",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 22,
+     "date": "2025-08-15",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 23,
+     "date": "2025-08-17",
+     "type": "PAYMENT",
+     "amount_rwf": 5000,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 24,
+     "date": "2025-08-21",
+     "type": "PAYMENT",
+     "amount_rwf": 3800,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 25,
+     "date": "2025-08-21",
+     "type": "TRANSFER",
+     "amount_rwf": 1300,
+     "receiver": "250792770899",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 26,
+     "date": "2025-08-22",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 27,
+     "date": "2025-08-22",
+     "type": "PAYMENT",
+     "amount_rwf": 900,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 28,
+     "date": "2025-08-22",
+     "type": "TRANSFER",
+     "amount_rwf": 3200,
+     "receiver": "250789046489",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 29,
+     "date": "2025-08-23",
+     "type": "PAYMENT",
+     "amount_rwf": 3800,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 30,
+     "date": "2025-08-24",
+     "type": "PAYMENT",
+     "amount_rwf": 3300,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 31,
+     "date": "2025-08-24",
+     "type": "TRANSFER",
+     "amount_rwf": 3400,
+     "receiver": "250792354992",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 32,
+     "date": "2025-08-26",
+     "type": "PAYMENT",
+     "amount_rwf": 4000,
+     "receiver": "20095145",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 33,
+     "date": "2025-08-26",
+     "type": "PAYMENT",
+     "amount_rwf": 2300,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 34,
+     "date": "2025-08-27",
+     "type": "TRANSFER",
+     "amount_rwf": 7400,
+     "receiver": "250788870127",
+     "sender": "250793487192",
+     "fee_rwf": 0
+    },
+    {
+     "id": 35,
+     "date": "2025-09-02",
+     "type": "TRANSFER",
+     "amount_rwf": 21800,
+     "receiver": "250788870127",
+     "sender": "250789344519",
+     "fee_rwf": 0
+    },
+    {
+     "id": 36,
+     "date": "2025-09-03",
+     "type": "TRANSFER",
+     "amount_rwf": 4200,
+     "receiver": "250788307696",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 37,
+     "date": "2025-09-04",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 38,
+     "date": "2025-09-05",
+     "type": "TRANSFER",
+     "amount_rwf": 11700,
+     "receiver": "250788870127",
+     "sender": "250789344519",
+     "fee_rwf": 0
+    },
+    {
+     "id": 39,
+     "date": "2025-09-05",
+     "type": "TRANSFER",
+     "amount_rwf": 4000,
+     "receiver": "250789826952",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 40,
+     "date": "2025-09-05",
+     "type": "PAYMENT",
+     "amount_rwf": 2100,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 41,
+     "date": "2025-09-05",
+     "type": "TRANSFER",
+     "amount_rwf": 2200,
+     "receiver": "250788829538",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 42,
+     "date": "2025-09-06",
+     "type": "TRANSFER",
+     "amount_rwf": 2100,
+     "receiver": "250788330926",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 43,
+     "date": "2025-09-07",
+     "type": "PAYMENT",
+     "amount_rwf": 1400,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 44,
+     "date": "2025-09-08",
+     "type": "PAYMENT",
+     "amount_rwf": 3200,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 45,
+     "date": "2025-09-09",
+     "type": "TRANSFER",
+     "amount_rwf": 10100,
+     "receiver": "250788870127",
+     "sender": "250792226441",
+     "fee_rwf": 0
+    },
+    {
+     "id": 46,
+     "date": "2025-09-11",
+     "type": "PAYMENT",
+     "amount_rwf": 4000,
+     "receiver": "20095145",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 47,
+     "date": "2025-09-11",
+     "type": "PAYMENT",
+     "amount_rwf": 1600,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 48,
+     "date": "2025-09-12",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 49,
+     "date": "2025-09-14",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 50,
+     "date": "2025-09-15",
+     "type": "PAYMENT",
+     "amount_rwf": 17000,
+     "receiver": "29303799",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 51,
+     "date": "2025-09-16",
+     "type": "PAYMENT",
+     "amount_rwf": 5000,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 52,
+     "date": "2025-09-17",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 53,
+     "date": "2025-09-21",
+     "type": "TRANSFER",
+     "amount_rwf": 3000,
+     "receiver": "250792417568",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 54,
+     "date": "2025-09-24",
+     "type": "PAYMENT",
+     "amount_rwf": 18000,
+     "receiver": "24854922",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 55,
+     "date": "2025-09-25",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 56,
+     "date": "2025-09-25",
+     "type": "PAYMENT",
+     "amount_rwf": 5200,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 57,
+     "date": "2025-09-25",
+     "type": "TRANSFER",
+     "amount_rwf": 6300,
+     "receiver": "250788870127",
+     "sender": "250789300009",
+     "fee_rwf": 0
+    },
+    {
+     "id": 58,
+     "date": "2025-09-26",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 59,
+     "date": "2025-09-26",
+     "type": "TRANSFER",
+     "amount_rwf": 4900,
+     "receiver": "250791265618",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 60,
+     "date": "2025-10-01",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 61,
+     "date": "2025-10-02",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 62,
+     "date": "2025-10-02",
+     "type": "TRANSFER",
+     "amount_rwf": 3200,
+     "receiver": "250790130521",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 63,
+     "date": "2025-10-05",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "20095145",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 64,
+     "date": "2025-10-05",
+     "type": "PAYMENT",
+     "amount_rwf": 5700,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 65,
+     "date": "2025-10-07",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 66,
+     "date": "2025-10-08",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 67,
+     "date": "2025-10-09",
+     "type": "TRANSFER",
+     "amount_rwf": 4000,
+     "receiver": "250789826952",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 68,
+     "date": "2025-10-11",
+     "type": "PAYMENT",
+     "amount_rwf": 3900,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 69,
+     "date": "2025-10-12",
+     "type": "TRANSFER",
+     "amount_rwf": 11600,
+     "receiver": "250788870127",
+     "sender": "250792226441",
+     "fee_rwf": 0
+    },
+    {
+     "id": 70,
+     "date": "2025-10-13",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 71,
+     "date": "2025-10-16",
+     "type": "TRANSFER",
+     "amount_rwf": 4000,
+     "receiver": "250788870127",
+     "sender": "250792279676",
+     "fee_rwf": 0
+    },
+    {
+     "id": 72,
+     "date": "2025-10-17",
+     "type": "TRANSFER",
+     "amount_rwf": 24500,
+     "receiver": "250788870127",
+     "sender": "250792217220",
+     "fee_rwf": 0
+    },
+    {
+     "id": 73,
+     "date": "2025-10-19",
+     "type": "TRANSFER",
+     "amount_rwf": 9400,
+     "receiver": "250788870127",
+     "sender": "250789344519",
+     "fee_rwf": 0
+    },
+    {
+     "id": 74,
+     "date": "2025-10-20",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 75,
+     "date": "2025-10-20",
+     "type": "PAYMENT",
+     "amount_rwf": 2100,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 76,
+     "date": "2025-10-21",
+     "type": "TRANSFER",
+     "amount_rwf": 3500,
+     "receiver": "250791932694",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 77,
+     "date": "2025-10-22",
+     "type": "PAYMENT",
+     "amount_rwf": 2100,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 78,
+     "date": "2025-10-23",
+     "type": "TRANSFER",
+     "amount_rwf": 7600,
+     "receiver": "250788870127",
+     "sender": "250788762400",
+     "fee_rwf": 0
+    },
+    {
+     "id": 79,
+     "date": "2025-10-25",
+     "type": "TRANSFER",
+     "amount_rwf": 17900,
+     "receiver": "250788870127",
+     "sender": "250792226441",
+     "fee_rwf": 0
+    },
+    {
+     "id": 80,
+     "date": "2025-10-25",
+     "type": "PAYMENT",
+     "amount_rwf": 2300,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 81,
+     "date": "2025-10-25",
+     "type": "TRANSFER",
+     "amount_rwf": 3800,
+     "receiver": "250793461097",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 82,
+     "date": "2025-10-28",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 83,
+     "date": "2025-10-28",
+     "type": "TRANSFER",
+     "amount_rwf": 3700,
+     "receiver": "250790195892",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 84,
+     "date": "2025-11-01",
+     "type": "TRANSFER",
+     "amount_rwf": 22000,
+     "receiver": "250788870127",
+     "sender": "250789344519",
+     "fee_rwf": 0
+    },
+    {
+     "id": 85,
+     "date": "2025-11-01",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 86,
+     "date": "2025-11-02",
+     "type": "TRANSFER",
+     "amount_rwf": 11500,
+     "receiver": "250788870127",
+     "sender": "250792226441",
+     "fee_rwf": 0
+    },
+    {
+     "id": 87,
+     "date": "2025-11-02",
+     "type": "PAYMENT",
+     "amount_rwf": 2700,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 88,
+     "date": "2025-11-03",
+     "type": "TRANSFER",
+     "amount_rwf": 5000,
+     "receiver": "250790336814",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 89,
+     "date": "2025-11-04",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 90,
+     "date": "2025-11-05",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 91,
+     "date": "2025-11-06",
+     "type": "TRANSFER",
+     "amount_rwf": 4000,
+     "receiver": "250789826952",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 92,
+     "date": "2025-11-06",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 93,
+     "date": "2025-11-06",
+     "type": "TRANSFER",
+     "amount_rwf": 1300,
+     "receiver": "250788343848",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 94,
+     "date": "2025-11-12",
+     "type": "PAYMENT",
+     "amount_rwf": 4400,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 95,
+     "date": "2025-11-12",
+     "type": "TRANSFER",
+     "amount_rwf": 1300,
+     "receiver": "250788870127",
+     "sender": "250793912300",
+     "fee_rwf": 0
+    },
+    {
+     "id": 96,
+     "date": "2025-11-13",
+     "type": "TRANSFER",
+     "amount_rwf": 22500,
+     "receiver": "250788870127",
+     "sender": "250792217220",
+     "fee_rwf": 0
+    },
+    {
+     "id": 97,
+     "date": "2025-11-14",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 98,
+     "date": "2025-11-14",
+     "type": "PAYMENT",
+     "amount_rwf": 5800,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 99,
+     "date": "2025-11-14",
+     "type": "TRANSFER",
+     "amount_rwf": 5900,
+     "receiver": "250790321384",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 100,
+     "date": "2025-11-15",
+     "type": "PAYMENT",
+     "amount_rwf": 3100,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 101,
+     "date": "2025-11-15",
+     "type": "TRANSFER",
+     "amount_rwf": 3900,
+     "receiver": "250788870127",
+     "sender": "250792456068",
+     "fee_rwf": 0
+    },
+    {
+     "id": 102,
+     "date": "2025-11-16",
+     "type": "TRANSFER",
+     "amount_rwf": 10600,
+     "receiver": "250788870127",
+     "sender": "250792226441",
+     "fee_rwf": 0
+    },
+    {
+     "id": 103,
+     "date": "2025-11-16",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 104,
+     "date": "2025-11-20",
+     "type": "TRANSFER",
+     "amount_rwf": 4200,
+     "receiver": "250792752524",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 105,
+     "date": "2025-11-22",
+     "type": "PAYMENT",
+     "amount_rwf": 4500,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 106,
+     "date": "2025-11-24",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 107,
+     "date": "2025-11-24",
+     "type": "PAYMENT",
+     "amount_rwf": 2700,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 108,
+     "date": "2025-11-26",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "20095145",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 109,
+     "date": "2025-11-27",
+     "type": "TRANSFER",
+     "amount_rwf": 4000,
+     "receiver": "250789723270",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 110,
+     "date": "2025-11-28",
+     "type": "TRANSFER",
+     "amount_rwf": 12900,
+     "receiver": "250788870127",
+     "sender": "250792217220",
+     "fee_rwf": 0
+    },
+    {
+     "id": 111,
+     "date": "2025-12-01",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 112,
+     "date": "2025-12-02",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 113,
+     "date": "2025-12-02",
+     "type": "TRANSFER",
+     "amount_rwf": 6000,
+     "receiver": "250793425942",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 114,
+     "date": "2025-12-02",
+     "type": "TRANSFER",
+     "amount_rwf": 1600,
+     "receiver": "250788870127",
+     "sender": "250789816332",
+     "fee_rwf": 0
+    },
+    {
+     "id": 115,
+     "date": "2025-12-03",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 116,
+     "date": "2025-12-03",
+     "type": "PAYMENT",
+     "amount_rwf": 3500,
+     "receiver": "20095145",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 117,
+     "date": "2025-12-03",
+     "type": "TRANSFER",
+     "amount_rwf": 3500,
+     "receiver": "250792840010",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 118,
+     "date": "2025-12-05",
+     "type": "TRANSFER",
+     "amount_rwf": 6300,
+     "receiver": "250788870127",
+     "sender": "250790379742",
+     "fee_rwf": 0
+    },
+    {
+     "id": 119,
+     "date": "2025-12-07",
+     "type": "PAYMENT",
+     "amount_rwf": 5500,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 120,
+     "date": "2025-12-09",
+     "type": "TRANSFER",
+     "amount_rwf": 18700,
+     "receiver": "250788870127",
+     "sender": "250792226441",
+     "fee_rwf": 0
+    },
+    {
+     "id": 121,
+     "date": "2025-12-10",
+     "type": "PAYMENT",
+     "amount_rwf": 4400,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 122,
+     "date": "2025-12-12",
+     "type": "PAYMENT",
+     "amount_rwf": 4600,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 123,
+     "date": "2025-12-13",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 124,
+     "date": "2025-12-14",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 125,
+     "date": "2025-12-15",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 126,
+     "date": "2025-12-16",
+     "type": "PAYMENT",
+     "amount_rwf": 3100,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 127,
+     "date": "2025-12-20",
+     "type": "TRANSFER",
+     "amount_rwf": 17700,
+     "receiver": "250788870127",
+     "sender": "250792226441",
+     "fee_rwf": 0
+    },
+    {
+     "id": 128,
+     "date": "2025-12-21",
+     "type": "TRANSFER",
+     "amount_rwf": 24600,
+     "receiver": "250788870127",
+     "sender": "250789344519",
+     "fee_rwf": 0
+    },
+    {
+     "id": 129,
+     "date": "2025-12-21",
+     "type": "TRANSFER",
+     "amount_rwf": 1800,
+     "receiver": "250788149715",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 130,
+     "date": "2025-12-24",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 131,
+     "date": "2025-12-26",
+     "type": "PAYMENT",
+     "amount_rwf": 3900,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 132,
+     "date": "2025-12-26",
+     "type": "TRANSFER",
+     "amount_rwf": 5500,
+     "receiver": "250793819264",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 133,
+     "date": "2025-12-27",
+     "type": "PAYMENT",
+     "amount_rwf": 4900,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 134,
+     "date": "2026-01-01",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 135,
+     "date": "2026-01-02",
+     "type": "PAYMENT",
+     "amount_rwf": 2500,
+     "receiver": "20095145",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 136,
+     "date": "2026-01-02",
+     "type": "PAYMENT",
+     "amount_rwf": 4700,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 137,
+     "date": "2026-01-02",
+     "type": "TRANSFER",
+     "amount_rwf": 4200,
+     "receiver": "250790390084",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 138,
+     "date": "2026-01-04",
+     "type": "TRANSFER",
+     "amount_rwf": 15000,
+     "receiver": "250788870127",
+     "sender": "250792226441",
+     "fee_rwf": 0
+    },
+    {
+     "id": 139,
+     "date": "2026-01-04",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 140,
+     "date": "2026-01-05",
+     "type": "PAYMENT",
+     "amount_rwf": 3800,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 141,
+     "date": "2026-01-05",
+     "type": "TRANSFER",
+     "amount_rwf": 4100,
+     "receiver": "250788601800",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 142,
+     "date": "2026-01-06",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 143,
+     "date": "2026-01-06",
+     "type": "PAYMENT",
+     "amount_rwf": 5300,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 144,
+     "date": "2026-01-07",
+     "type": "PAYMENT",
+     "amount_rwf": 1600,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 145,
+     "date": "2026-01-08",
+     "type": "TRANSFER",
+     "amount_rwf": 4000,
+     "receiver": "250789826952",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 146,
+     "date": "2026-01-09",
+     "type": "PAYMENT",
+     "amount_rwf": 5000,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 147,
+     "date": "2026-01-10",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 148,
+     "date": "2026-01-11",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 149,
+     "date": "2026-01-13",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 150,
+     "date": "2026-01-15",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 151,
+     "date": "2026-01-17",
+     "type": "PAYMENT",
+     "amount_rwf": 20000,
+     "receiver": "29303799",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 152,
+     "date": "2026-01-19",
+     "type": "TRANSFER",
+     "amount_rwf": 1600,
+     "receiver": "250792384774",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 153,
+     "date": "2026-01-20",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 154,
+     "date": "2026-01-20",
+     "type": "PAYMENT",
+     "amount_rwf": 1800,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 155,
+     "date": "2026-01-20",
+     "type": "TRANSFER",
+     "amount_rwf": 3800,
+     "receiver": "250790681113",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 156,
+     "date": "2026-01-21",
+     "type": "PAYMENT",
+     "amount_rwf": 3100,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 157,
+     "date": "2026-01-22",
+     "type": "TRANSFER",
+     "amount_rwf": 2800,
+     "receiver": "250789118959",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 158,
+     "date": "2026-01-23",
+     "type": "TRANSFER",
+     "amount_rwf": 22800,
+     "receiver": "250788870127",
+     "sender": "250792217220",
+     "fee_rwf": 0
+    },
+    {
+     "id": 159,
+     "date": "2026-01-24",
+     "type": "TRANSFER",
+     "amount_rwf": 2500,
+     "receiver": "250788870127",
+     "sender": "250791542895",
+     "fee_rwf": 0
+    },
+    {
+     "id": 160,
+     "date": "2026-01-26",
+     "type": "TRANSFER",
+     "amount_rwf": 21600,
+     "receiver": "250788870127",
+     "sender": "250792226441",
+     "fee_rwf": 0
+    },
+    {
+     "id": 161,
+     "date": "2026-01-27",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 162,
+     "date": "2026-01-28",
+     "type": "TRANSFER",
+     "amount_rwf": 22900,
+     "receiver": "250788870127",
+     "sender": "250792226441",
+     "fee_rwf": 0
+    },
+    {
+     "id": 163,
+     "date": "2026-02-03",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 164,
+     "date": "2026-02-03",
+     "type": "PAYMENT",
+     "amount_rwf": 2600,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 165,
+     "date": "2026-02-04",
+     "type": "TRANSFER",
+     "amount_rwf": 18200,
+     "receiver": "250788870127",
+     "sender": "250789344519",
+     "fee_rwf": 0
+    },
+    {
+     "id": 166,
+     "date": "2026-02-04",
+     "type": "TRANSFER",
+     "amount_rwf": 4200,
+     "receiver": "250789641599",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 167,
+     "date": "2026-02-05",
+     "type": "PAYMENT",
+     "amount_rwf": 4500,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 168,
+     "date": "2026-02-07",
+     "type": "PAYMENT",
+     "amount_rwf": 13000,
+     "receiver": "24854922",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 169,
+     "date": "2026-02-08",
+     "type": "TRANSFER",
+     "amount_rwf": 4000,
+     "receiver": "250789826952",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 170,
+     "date": "2026-02-08",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 171,
+     "date": "2026-02-09",
+     "type": "PAYMENT",
+     "amount_rwf": 3700,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 172,
+     "date": "2026-02-09",
+     "type": "TRANSFER",
+     "amount_rwf": 2800,
+     "receiver": "250793960997",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 173,
+     "date": "2026-02-10",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 174,
+     "date": "2026-02-11",
+     "type": "TRANSFER",
+     "amount_rwf": 16400,
+     "receiver": "250788870127",
+     "sender": "250792226441",
+     "fee_rwf": 0
+    },
+    {
+     "id": 175,
+     "date": "2026-02-11",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 176,
+     "date": "2026-02-13",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 177,
+     "date": "2026-02-14",
+     "type": "TRANSFER",
+     "amount_rwf": 13000,
+     "receiver": "250788870127",
+     "sender": "250789344519",
+     "fee_rwf": 0
+    },
+    {
+     "id": 178,
+     "date": "2026-02-14",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 179,
+     "date": "2026-02-15",
+     "type": "PAYMENT",
+     "amount_rwf": 3500,
+     "receiver": "20095145",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 180,
+     "date": "2026-02-15",
+     "type": "PAYMENT",
+     "amount_rwf": 4200,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 181,
+     "date": "2026-02-17",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 182,
+     "date": "2026-02-17",
+     "type": "PAYMENT",
+     "amount_rwf": 1200,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 183,
+     "date": "2026-02-18",
+     "type": "TRANSFER",
+     "amount_rwf": 4500,
+     "receiver": "250789128594",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 184,
+     "date": "2026-02-19",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 185,
+     "date": "2026-02-23",
+     "type": "TRANSFER",
+     "amount_rwf": 1600,
+     "receiver": "250788474001",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 186,
+     "date": "2026-02-24",
+     "type": "TRANSFER",
+     "amount_rwf": 23500,
+     "receiver": "250788870127",
+     "sender": "250792217220",
+     "fee_rwf": 0
+    },
+    {
+     "id": 187,
+     "date": "2026-02-25",
+     "type": "TRANSFER",
+     "amount_rwf": 1900,
+     "receiver": "250793466732",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 188,
+     "date": "2026-02-26",
+     "type": "TRANSFER",
+     "amount_rwf": 6600,
+     "receiver": "250788870127",
+     "sender": "250790700280",
+     "fee_rwf": 0
+    },
+    {
+     "id": 189,
+     "date": "2026-02-27",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 190,
+     "date": "2026-03-01",
+     "type": "PAYMENT",
+     "amount_rwf": 3400,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 191,
+     "date": "2026-03-03",
+     "type": "TRANSFER",
+     "amount_rwf": 11200,
+     "receiver": "250788870127",
+     "sender": "250789344519",
+     "fee_rwf": 0
+    },
+    {
+     "id": 192,
+     "date": "2026-03-03",
+     "type": "PAYMENT",
+     "amount_rwf": 1600,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 193,
+     "date": "2026-03-03",
+     "type": "TRANSFER",
+     "amount_rwf": 3000,
+     "receiver": "250789746385",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 194,
+     "date": "2026-03-05",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 195,
+     "date": "2026-03-06",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "20095145",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 196,
+     "date": "2026-03-08",
+     "type": "PAYMENT",
+     "amount_rwf": 3500,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 197,
+     "date": "2026-03-08",
+     "type": "TRANSFER",
+     "amount_rwf": 7500,
+     "receiver": "250788870127",
+     "sender": "250791027560",
+     "fee_rwf": 0
+    },
+    {
+     "id": 198,
+     "date": "2026-03-10",
+     "type": "TRANSFER",
+     "amount_rwf": 5700,
+     "receiver": "250789832250",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 199,
+     "date": "2026-03-12",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 200,
+     "date": "2026-03-12",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 201,
+     "date": "2026-03-13",
+     "type": "PAYMENT",
+     "amount_rwf": 1900,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 202,
+     "date": "2026-03-14",
+     "type": "TRANSFER",
+     "amount_rwf": 20200,
+     "receiver": "250788870127",
+     "sender": "250792217220",
+     "fee_rwf": 0
+    },
+    {
+     "id": 203,
+     "date": "2026-03-17",
+     "type": "PAYMENT",
+     "amount_rwf": 1100,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 204,
+     "date": "2026-03-18",
+     "type": "TRANSFER",
+     "amount_rwf": 3500,
+     "receiver": "250792235134",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 205,
+     "date": "2026-03-21",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 206,
+     "date": "2026-03-23",
+     "type": "TRANSFER",
+     "amount_rwf": 1500,
+     "receiver": "250789830541",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 207,
+     "date": "2026-03-24",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 208,
+     "date": "2026-03-25",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 209,
+     "date": "2026-03-26",
+     "type": "PAYMENT",
+     "amount_rwf": 3200,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 210,
+     "date": "2026-03-27",
+     "type": "TRANSFER",
+     "amount_rwf": 10000,
+     "receiver": "250788870127",
+     "sender": "250789344519",
+     "fee_rwf": 0
+    },
+    {
+     "id": 211,
+     "date": "2026-03-27",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 212,
+     "date": "2026-03-27",
+     "type": "PAYMENT",
+     "amount_rwf": 4700,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 213,
+     "date": "2026-04-01",
+     "type": "PAYMENT",
+     "amount_rwf": 1400,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 214,
+     "date": "2026-04-03",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 215,
+     "date": "2026-04-04",
+     "type": "TRANSFER",
+     "amount_rwf": 19600,
+     "receiver": "250788870127",
+     "sender": "250789344519",
+     "fee_rwf": 0
+    },
+    {
+     "id": 216,
+     "date": "2026-04-06",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 217,
+     "date": "2026-04-08",
+     "type": "TRANSFER",
+     "amount_rwf": 4000,
+     "receiver": "250789826952",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 218,
+     "date": "2026-04-10",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "20095145",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 219,
+     "date": "2026-04-11",
+     "type": "TRANSFER",
+     "amount_rwf": 21900,
+     "receiver": "250788870127",
+     "sender": "250789344519",
+     "fee_rwf": 0
+    },
+    {
+     "id": 220,
+     "date": "2026-04-12",
+     "type": "TRANSFER",
+     "amount_rwf": 5000,
+     "receiver": "250789641674",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 221,
+     "date": "2026-04-14",
+     "type": "TRANSFER",
+     "amount_rwf": 9700,
+     "receiver": "250788870127",
+     "sender": "250792226441",
+     "fee_rwf": 0
+    },
+    {
+     "id": 222,
+     "date": "2026-04-15",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 223,
+     "date": "2026-04-15",
+     "type": "TRANSFER",
+     "amount_rwf": 1200,
+     "receiver": "250788324314",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 224,
+     "date": "2026-04-16",
+     "type": "PAYMENT",
+     "amount_rwf": 2900,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 225,
+     "date": "2026-04-18",
+     "type": "TRANSFER",
+     "amount_rwf": 18200,
+     "receiver": "250788870127",
+     "sender": "250792226441",
+     "fee_rwf": 0
+    },
+    {
+     "id": 226,
+     "date": "2026-04-18",
+     "type": "TRANSFER",
+     "amount_rwf": 3800,
+     "receiver": "250793753789",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 227,
+     "date": "2026-04-19",
+     "type": "TRANSFER",
+     "amount_rwf": 4400,
+     "receiver": "250792430749",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 228,
+     "date": "2026-04-19",
+     "type": "TRANSFER",
+     "amount_rwf": 1600,
+     "receiver": "250788870127",
+     "sender": "250789332427",
+     "fee_rwf": 0
+    },
+    {
+     "id": 229,
+     "date": "2026-04-20",
+     "type": "PAYMENT",
+     "amount_rwf": 2600,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 230,
+     "date": "2026-04-21",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 231,
+     "date": "2026-04-22",
+     "type": "TRANSFER",
+     "amount_rwf": 11400,
+     "receiver": "250788870127",
+     "sender": "250789344519",
+     "fee_rwf": 0
+    },
+    {
+     "id": 232,
+     "date": "2026-04-23",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 233,
+     "date": "2026-04-25",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 234,
+     "date": "2026-04-25",
+     "type": "PAYMENT",
+     "amount_rwf": 5300,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 235,
+     "date": "2026-04-26",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 236,
+     "date": "2026-04-27",
+     "type": "TRANSFER",
+     "amount_rwf": 6300,
+     "receiver": "250788870127",
+     "sender": "250788471832",
+     "fee_rwf": 0
+    },
+    {
+     "id": 237,
+     "date": "2026-04-28",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 238,
+     "date": "2026-05-02",
+     "type": "PAYMENT",
+     "amount_rwf": 4200,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 239,
+     "date": "2026-05-04",
+     "type": "PAYMENT",
+     "amount_rwf": 5900,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 240,
+     "date": "2026-05-05",
+     "type": "TRANSFER",
+     "amount_rwf": 11500,
+     "receiver": "250788870127",
+     "sender": "250792226441",
+     "fee_rwf": 0
+    },
+    {
+     "id": 241,
+     "date": "2026-05-05",
+     "type": "TRANSFER",
+     "amount_rwf": 5000,
+     "receiver": "250793616338",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 242,
+     "date": "2026-05-07",
+     "type": "TRANSFER",
+     "amount_rwf": 20000,
+     "receiver": "250788870127",
+     "sender": "250792217220",
+     "fee_rwf": 0
+    },
+    {
+     "id": 243,
+     "date": "2026-05-07",
+     "type": "TRANSFER",
+     "amount_rwf": 4000,
+     "receiver": "250789826952",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 244,
+     "date": "2026-05-08",
+     "type": "TRANSFER",
+     "amount_rwf": 17100,
+     "receiver": "250788870127",
+     "sender": "250789344519",
+     "fee_rwf": 0
+    },
+    {
+     "id": 245,
+     "date": "2026-05-08",
+     "type": "PAYMENT",
+     "amount_rwf": 4500,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 246,
+     "date": "2026-05-08",
+     "type": "TRANSFER",
+     "amount_rwf": 3800,
+     "receiver": "250788870127",
+     "sender": "250792938397",
+     "fee_rwf": 0
+    },
+    {
+     "id": 247,
+     "date": "2026-05-10",
+     "type": "PAYMENT",
+     "amount_rwf": 1300,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 248,
+     "date": "2026-05-11",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 249,
+     "date": "2026-05-11",
+     "type": "PAYMENT",
+     "amount_rwf": 4000,
+     "receiver": "20095145",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 250,
+     "date": "2026-05-12",
+     "type": "TRANSFER",
+     "amount_rwf": 2000,
+     "receiver": "250789453633",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 251,
+     "date": "2026-05-13",
+     "type": "PAYMENT",
+     "amount_rwf": 27000,
+     "receiver": "29303799",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 252,
+     "date": "2026-05-16",
+     "type": "TRANSFER",
+     "amount_rwf": 15400,
+     "receiver": "250788870127",
+     "sender": "250792226441",
+     "fee_rwf": 0
+    },
+    {
+     "id": 253,
+     "date": "2026-05-17",
+     "type": "TRANSFER",
+     "amount_rwf": 4600,
+     "receiver": "250788871776",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 254,
+     "date": "2026-05-19",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 255,
+     "date": "2026-05-20",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 256,
+     "date": "2026-05-21",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 257,
+     "date": "2026-05-22",
+     "type": "TRANSFER",
+     "amount_rwf": 8900,
+     "receiver": "250788870127",
+     "sender": "250789344519",
+     "fee_rwf": 0
+    },
+    {
+     "id": 258,
+     "date": "2026-05-22",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 259,
+     "date": "2026-05-22",
+     "type": "TRANSFER",
+     "amount_rwf": 1500,
+     "receiver": "250792160448",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 260,
+     "date": "2026-05-23",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 261,
+     "date": "2026-05-23",
+     "type": "TRANSFER",
+     "amount_rwf": 3300,
+     "receiver": "250788870127",
+     "sender": "250788262778",
+     "fee_rwf": 0
+    },
+    {
+     "id": 262,
+     "date": "2026-05-25",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 263,
+     "date": "2026-05-25",
+     "type": "PAYMENT",
+     "amount_rwf": 1700,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 264,
+     "date": "2026-05-26",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 265,
+     "date": "2026-05-26",
+     "type": "PAYMENT",
+     "amount_rwf": 4900,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 266,
+     "date": "2026-05-27",
+     "type": "PAYMENT",
+     "amount_rwf": 5700,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 267,
+     "date": "2026-05-27",
+     "type": "TRANSFER",
+     "amount_rwf": 3000,
+     "receiver": "250789169834",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 268,
+     "date": "2026-05-28",
+     "type": "PAYMENT",
+     "amount_rwf": 5200,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 269,
+     "date": "2026-06-01",
+     "type": "TRANSFER",
+     "amount_rwf": 17000,
+     "receiver": "250788870127",
+     "sender": "250789344519",
+     "fee_rwf": 0
+    },
+    {
+     "id": 270,
+     "date": "2026-06-02",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 271,
+     "date": "2026-06-03",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 272,
+     "date": "2026-06-05",
+     "type": "PAYMENT",
+     "amount_rwf": 18000,
+     "receiver": "24854922",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 273,
+     "date": "2026-06-06",
+     "type": "TRANSFER",
+     "amount_rwf": 18100,
+     "receiver": "250788870127",
+     "sender": "250792226441",
+     "fee_rwf": 0
+    },
+    {
+     "id": 274,
+     "date": "2026-06-06",
+     "type": "TRANSFER",
+     "amount_rwf": 4000,
+     "receiver": "250789826952",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 275,
+     "date": "2026-06-06",
+     "type": "TRANSFER",
+     "amount_rwf": 6400,
+     "receiver": "250788870127",
+     "sender": "250792755638",
+     "fee_rwf": 0
+    },
+    {
+     "id": 276,
+     "date": "2026-06-08",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 277,
+     "date": "2026-06-09",
+     "type": "TRANSFER",
+     "amount_rwf": 19500,
+     "receiver": "250788870127",
+     "sender": "250792217220",
+     "fee_rwf": 0
+    },
+    {
+     "id": 278,
+     "date": "2026-06-09",
+     "type": "TRANSFER",
+     "amount_rwf": 1500,
+     "receiver": "250793317534",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 279,
+     "date": "2026-06-10",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 280,
+     "date": "2026-06-12",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 281,
+     "date": "2026-06-15",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 282,
+     "date": "2026-06-17",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 283,
+     "date": "2026-06-17",
+     "type": "PAYMENT",
+     "amount_rwf": 3200,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 284,
+     "date": "2026-06-18",
+     "type": "TRANSFER",
+     "amount_rwf": 5500,
+     "receiver": "250792097966",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 285,
+     "date": "2026-06-19",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "39997825",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 286,
+     "date": "2026-06-19",
+     "type": "PAYMENT",
+     "amount_rwf": 4300,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 287,
+     "date": "2026-06-21",
+     "type": "PAYMENT",
+     "amount_rwf": 800,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 288,
+     "date": "2026-06-21",
+     "type": "TRANSFER",
+     "amount_rwf": 4600,
+     "receiver": "250793176827",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 289,
+     "date": "2026-06-23",
+     "type": "TRANSFER",
+     "amount_rwf": 13900,
+     "receiver": "250788870127",
+     "sender": "250792217220",
+     "fee_rwf": 0
+    },
+    {
+     "id": 290,
+     "date": "2026-06-23",
+     "type": "PAYMENT",
+     "amount_rwf": 5800,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 291,
+     "date": "2026-06-27",
+     "type": "TRANSFER",
+     "amount_rwf": 21100,
+     "receiver": "250788870127",
+     "sender": "250792217220",
+     "fee_rwf": 0
+    },
+    {
+     "id": 292,
+     "date": "2026-07-02",
+     "type": "TRANSFER",
+     "amount_rwf": 700,
+     "receiver": "250788047670",
+     "sender": "250788870127",
+     "fee_rwf": 20
+    },
+    {
+     "id": 293,
+     "date": "2026-07-03",
+     "type": "PAYMENT",
+     "amount_rwf": 5100,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 294,
+     "date": "2026-07-06",
+     "type": "PAYMENT",
+     "amount_rwf": 3800,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 295,
+     "date": "2026-07-07",
+     "type": "TRANSFER",
+     "amount_rwf": 4000,
+     "receiver": "250789826952",
+     "sender": "250788870127",
+     "fee_rwf": 100
+    },
+    {
+     "id": 296,
+     "date": "2026-07-07",
+     "type": "TRANSFER",
+     "amount_rwf": 7300,
+     "receiver": "250788870127",
+     "sender": "250792436822",
+     "fee_rwf": 0
+    },
+    {
+     "id": 297,
+     "date": "2026-07-08",
+     "type": "PAYMENT",
+     "amount_rwf": 1400,
+     "receiver": "48803329",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    },
+    {
+     "id": 298,
+     "date": "2026-07-11",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "20095145",
+     "sender": "250788870127",
+     "fee_rwf": 0
+    }
+   ]
+  },
+  {
+   "farmer_id": "F004",
+   "name": "Habimana Jean Bosco",
+   "msisdn": "250792670030",
+   "district": "Bugesera",
+   "primary_activity": "Maize (single crop)",
+   "profile_hint": "income only at harvest, spends fast, silent months, no savings group \u2014 RISKY",
+   "counterparty_legend": {
+    "250788522230": "Grain trader \u2014 harvest sales only",
+    "250793572079": "Relative \u2014 irregular remittances",
+    "29719767": "Airtime",
+    "41538834": "Local shop",
+    "30136596": "School fees (paid late / partially)"
+   },
+   "n_transactions": 83,
+   "transactions": [
+    {
+     "id": 1,
+     "date": "2025-07-14",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 2,
+     "date": "2025-07-15",
+     "type": "TRANSFER",
+     "amount_rwf": 17000,
+     "receiver": "250790991307",
+     "sender": "250792670030",
+     "fee_rwf": 250
+    },
+    {
+     "id": 3,
+     "date": "2025-07-15",
+     "type": "TRANSFER",
+     "amount_rwf": 3100,
+     "receiver": "250791158787",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 4,
+     "date": "2025-07-23",
+     "type": "TRANSFER",
+     "amount_rwf": 2700,
+     "receiver": "250792670030",
+     "sender": "250791526195",
+     "fee_rwf": 0
+    },
+    {
+     "id": 5,
+     "date": "2025-07-24",
+     "type": "PAYMENT",
+     "amount_rwf": 2400,
+     "receiver": "41538834",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 6,
+     "date": "2025-07-26",
+     "type": "TRANSFER",
+     "amount_rwf": 75000,
+     "receiver": "250792670030",
+     "sender": "250788522230",
+     "fee_rwf": 0
+    },
+    {
+     "id": 7,
+     "date": "2025-07-28",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 8,
+     "date": "2025-08-01",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "41538834",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 9,
+     "date": "2025-08-11",
+     "type": "TRANSFER",
+     "amount_rwf": 2400,
+     "receiver": "250792670030",
+     "sender": "250791956431",
+     "fee_rwf": 0
+    },
+    {
+     "id": 10,
+     "date": "2025-08-15",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 11,
+     "date": "2025-08-16",
+     "type": "TRANSFER",
+     "amount_rwf": 1000,
+     "receiver": "250793144789",
+     "sender": "250792670030",
+     "fee_rwf": 20
+    },
+    {
+     "id": 12,
+     "date": "2025-08-17",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 13,
+     "date": "2025-08-24",
+     "type": "TRANSFER",
+     "amount_rwf": 4700,
+     "receiver": "250789588132",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 14,
+     "date": "2025-08-28",
+     "type": "TRANSFER",
+     "amount_rwf": 3200,
+     "receiver": "250793501608",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 15,
+     "date": "2025-09-07",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 16,
+     "date": "2025-09-08",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 17,
+     "date": "2025-09-08",
+     "type": "TRANSFER",
+     "amount_rwf": 3400,
+     "receiver": "250792670030",
+     "sender": "250790739142",
+     "fee_rwf": 0
+    },
+    {
+     "id": 18,
+     "date": "2025-09-11",
+     "type": "TRANSFER",
+     "amount_rwf": 5800,
+     "receiver": "250793277203",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 19,
+     "date": "2025-09-12",
+     "type": "TRANSFER",
+     "amount_rwf": 5500,
+     "receiver": "250791201603",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 20,
+     "date": "2025-09-15",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 21,
+     "date": "2025-09-16",
+     "type": "PAYMENT",
+     "amount_rwf": 4700,
+     "receiver": "41538834",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 22,
+     "date": "2025-09-18",
+     "type": "TRANSFER",
+     "amount_rwf": 2500,
+     "receiver": "250790585196",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 23,
+     "date": "2025-10-05",
+     "type": "TRANSFER",
+     "amount_rwf": 17000,
+     "receiver": "250792670030",
+     "sender": "250793572079",
+     "fee_rwf": 0
+    },
+    {
+     "id": 24,
+     "date": "2025-10-05",
+     "type": "PAYMENT",
+     "amount_rwf": 3000,
+     "receiver": "41538834",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 25,
+     "date": "2025-10-18",
+     "type": "TRANSFER",
+     "amount_rwf": 7500,
+     "receiver": "250792670030",
+     "sender": "250793286741",
+     "fee_rwf": 0
+    },
+    {
+     "id": 26,
+     "date": "2025-10-23",
+     "type": "TRANSFER",
+     "amount_rwf": 4500,
+     "receiver": "250790503110",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 27,
+     "date": "2025-10-28",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 28,
+     "date": "2025-11-02",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 29,
+     "date": "2025-11-04",
+     "type": "TRANSFER",
+     "amount_rwf": 4900,
+     "receiver": "250791939272",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 30,
+     "date": "2025-11-07",
+     "type": "PAYMENT",
+     "amount_rwf": 3800,
+     "receiver": "41538834",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 31,
+     "date": "2025-11-12",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 32,
+     "date": "2025-11-18",
+     "type": "TRANSFER",
+     "amount_rwf": 7000,
+     "receiver": "250792670030",
+     "sender": "250793572079",
+     "fee_rwf": 0
+    },
+    {
+     "id": 33,
+     "date": "2025-11-18",
+     "type": "PAYMENT",
+     "amount_rwf": 3200,
+     "receiver": "41538834",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 34,
+     "date": "2025-11-19",
+     "type": "TRANSFER",
+     "amount_rwf": 3700,
+     "receiver": "250790810616",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 35,
+     "date": "2025-12-02",
+     "type": "TRANSFER",
+     "amount_rwf": 1100,
+     "receiver": "250790968894",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 36,
+     "date": "2025-12-07",
+     "type": "TRANSFER",
+     "amount_rwf": 2700,
+     "receiver": "250792670030",
+     "sender": "250792284303",
+     "fee_rwf": 0
+    },
+    {
+     "id": 37,
+     "date": "2025-12-10",
+     "type": "TRANSFER",
+     "amount_rwf": 4100,
+     "receiver": "250793268900",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 38,
+     "date": "2025-12-12",
+     "type": "TRANSFER",
+     "amount_rwf": 13000,
+     "receiver": "250792670030",
+     "sender": "250793572079",
+     "fee_rwf": 0
+    },
+    {
+     "id": 39,
+     "date": "2026-01-05",
+     "type": "TRANSFER",
+     "amount_rwf": 1400,
+     "receiver": "250792776880",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 40,
+     "date": "2026-01-09",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 41,
+     "date": "2026-01-09",
+     "type": "TRANSFER",
+     "amount_rwf": 5300,
+     "receiver": "250789254235",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 42,
+     "date": "2026-01-12",
+     "type": "PAYMENT",
+     "amount_rwf": 3600,
+     "receiver": "41538834",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 43,
+     "date": "2026-01-20",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 44,
+     "date": "2026-01-23",
+     "type": "TRANSFER",
+     "amount_rwf": 10000,
+     "receiver": "250792670030",
+     "sender": "250793572079",
+     "fee_rwf": 0
+    },
+    {
+     "id": 45,
+     "date": "2026-01-23",
+     "type": "TRANSFER",
+     "amount_rwf": 900,
+     "receiver": "250793949154",
+     "sender": "250792670030",
+     "fee_rwf": 20
+    },
+    {
+     "id": 46,
+     "date": "2026-01-27",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 47,
+     "date": "2026-02-02",
+     "type": "PAYMENT",
+     "amount_rwf": 3500,
+     "receiver": "41538834",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 48,
+     "date": "2026-02-02",
+     "type": "TRANSFER",
+     "amount_rwf": 3900,
+     "receiver": "250790752204",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 49,
+     "date": "2026-02-04",
+     "type": "TRANSFER",
+     "amount_rwf": 4400,
+     "receiver": "250788714281",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 50,
+     "date": "2026-02-05",
+     "type": "TRANSFER",
+     "amount_rwf": 10000,
+     "receiver": "250792670030",
+     "sender": "250793572079",
+     "fee_rwf": 0
+    },
+    {
+     "id": 51,
+     "date": "2026-02-05",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 52,
+     "date": "2026-02-05",
+     "type": "PAYMENT",
+     "amount_rwf": 4700,
+     "receiver": "41538834",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 53,
+     "date": "2026-02-08",
+     "type": "TRANSFER",
+     "amount_rwf": 1600,
+     "receiver": "250788577086",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 54,
+     "date": "2026-02-12",
+     "type": "TRANSFER",
+     "amount_rwf": 143000,
+     "receiver": "250792670030",
+     "sender": "250788522230",
+     "fee_rwf": 0
+    },
+    {
+     "id": 55,
+     "date": "2026-02-12",
+     "type": "PAYMENT",
+     "amount_rwf": 11000,
+     "receiver": "30136596",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 56,
+     "date": "2026-02-15",
+     "type": "TRANSFER",
+     "amount_rwf": 51000,
+     "receiver": "250788280464",
+     "sender": "250792670030",
+     "fee_rwf": 250
+    },
+    {
+     "id": 57,
+     "date": "2026-02-18",
+     "type": "TRANSFER",
+     "amount_rwf": 49000,
+     "receiver": "250789147720",
+     "sender": "250792670030",
+     "fee_rwf": 250
+    },
+    {
+     "id": 58,
+     "date": "2026-02-20",
+     "type": "TRANSFER",
+     "amount_rwf": 129000,
+     "receiver": "250792670030",
+     "sender": "250788522230",
+     "fee_rwf": 0
+    },
+    {
+     "id": 59,
+     "date": "2026-02-25",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 60,
+     "date": "2026-03-16",
+     "type": "TRANSFER",
+     "amount_rwf": 4400,
+     "receiver": "250793209144",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 61,
+     "date": "2026-03-20",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 62,
+     "date": "2026-03-20",
+     "type": "PAYMENT",
+     "amount_rwf": 3400,
+     "receiver": "41538834",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 63,
+     "date": "2026-03-21",
+     "type": "TRANSFER",
+     "amount_rwf": 2900,
+     "receiver": "250790299279",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 64,
+     "date": "2026-04-21",
+     "type": "TRANSFER",
+     "amount_rwf": 5200,
+     "receiver": "250789561147",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 65,
+     "date": "2026-05-08",
+     "type": "PAYMENT",
+     "amount_rwf": 13000,
+     "receiver": "30136596",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 66,
+     "date": "2026-05-10",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 67,
+     "date": "2026-05-12",
+     "type": "TRANSFER",
+     "amount_rwf": 12000,
+     "receiver": "250792670030",
+     "sender": "250793572079",
+     "fee_rwf": 0
+    },
+    {
+     "id": 68,
+     "date": "2026-05-14",
+     "type": "TRANSFER",
+     "amount_rwf": 1900,
+     "receiver": "250788876822",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 69,
+     "date": "2026-05-19",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 70,
+     "date": "2026-05-26",
+     "type": "TRANSFER",
+     "amount_rwf": 5100,
+     "receiver": "250792670030",
+     "sender": "250789982105",
+     "fee_rwf": 0
+    },
+    {
+     "id": 71,
+     "date": "2026-05-27",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 72,
+     "date": "2026-05-27",
+     "type": "PAYMENT",
+     "amount_rwf": 900,
+     "receiver": "41538834",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 73,
+     "date": "2026-06-02",
+     "type": "TRANSFER",
+     "amount_rwf": 600,
+     "receiver": "250790595551",
+     "sender": "250792670030",
+     "fee_rwf": 20
+    },
+    {
+     "id": 74,
+     "date": "2026-06-04",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 75,
+     "date": "2026-06-05",
+     "type": "TRANSFER",
+     "amount_rwf": 8000,
+     "receiver": "250792670030",
+     "sender": "250792490755",
+     "fee_rwf": 0
+    },
+    {
+     "id": 76,
+     "date": "2026-06-10",
+     "type": "TRANSFER",
+     "amount_rwf": 5400,
+     "receiver": "250788973555",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 77,
+     "date": "2026-06-14",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 78,
+     "date": "2026-06-19",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 79,
+     "date": "2026-06-21",
+     "type": "PAYMENT",
+     "amount_rwf": 2700,
+     "receiver": "41538834",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 80,
+     "date": "2026-06-28",
+     "type": "TRANSFER",
+     "amount_rwf": 3200,
+     "receiver": "250790476419",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    },
+    {
+     "id": 81,
+     "date": "2026-07-01",
+     "type": "TRANSFER",
+     "amount_rwf": 90000,
+     "receiver": "250792670030",
+     "sender": "250788522230",
+     "fee_rwf": 0
+    },
+    {
+     "id": 82,
+     "date": "2026-07-06",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "29719767",
+     "sender": "250792670030",
+     "fee_rwf": 0
+    },
+    {
+     "id": 83,
+     "date": "2026-07-07",
+     "type": "TRANSFER",
+     "amount_rwf": 1400,
+     "receiver": "250790170387",
+     "sender": "250792670030",
+     "fee_rwf": 100
+    }
+   ]
+  },
+  {
+   "farmer_id": "F005",
+   "name": "Mugisha Eric",
+   "msisdn": "250790753504",
+   "district": "Gakenke",
+   "primary_activity": "Beans + maize (young farmer)",
+   "profile_hint": "THIN FILE \u2014 history only starts Feb 2026; promising coop pattern from May",
+   "counterparty_legend": {
+    "250789014768": "Farmer cooperative \u2014 monthly produce payment, started May 2026",
+    "44716795": "Airtime",
+    "31311607": "Local shop",
+    "46533759": "Agro-dealer"
+   },
+   "n_transactions": 29,
+   "transactions": [
+    {
+     "id": 1,
+     "date": "2026-02-14",
+     "type": "PAYMENT",
+     "amount_rwf": 2900,
+     "receiver": "31311607",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 2,
+     "date": "2026-02-18",
+     "type": "PAYMENT",
+     "amount_rwf": 10000,
+     "receiver": "46533759",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 3,
+     "date": "2026-02-19",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44716795",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 4,
+     "date": "2026-02-22",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44716795",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 5,
+     "date": "2026-02-25",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "44716795",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 6,
+     "date": "2026-02-27",
+     "type": "PAYMENT",
+     "amount_rwf": 2100,
+     "receiver": "31311607",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 7,
+     "date": "2026-03-01",
+     "type": "PAYMENT",
+     "amount_rwf": 1900,
+     "receiver": "31311607",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 8,
+     "date": "2026-03-04",
+     "type": "PAYMENT",
+     "amount_rwf": 500,
+     "receiver": "44716795",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 9,
+     "date": "2026-03-06",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44716795",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 10,
+     "date": "2026-03-08",
+     "type": "TRANSFER",
+     "amount_rwf": 6700,
+     "receiver": "250790753504",
+     "sender": "250790345637",
+     "fee_rwf": 0
+    },
+    {
+     "id": 11,
+     "date": "2026-03-22",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44716795",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 12,
+     "date": "2026-04-01",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44716795",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 13,
+     "date": "2026-04-02",
+     "type": "PAYMENT",
+     "amount_rwf": 3500,
+     "receiver": "31311607",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 14,
+     "date": "2026-04-19",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "44716795",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 15,
+     "date": "2026-04-24",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44716795",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 16,
+     "date": "2026-05-04",
+     "type": "PAYMENT",
+     "amount_rwf": 3400,
+     "receiver": "31311607",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 17,
+     "date": "2026-05-04",
+     "type": "TRANSFER",
+     "amount_rwf": 26000,
+     "receiver": "250790753504",
+     "sender": "250789014768",
+     "fee_rwf": 0
+    },
+    {
+     "id": 18,
+     "date": "2026-05-06",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "44716795",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 19,
+     "date": "2026-05-10",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "44716795",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 20,
+     "date": "2026-05-13",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "44716795",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 21,
+     "date": "2026-05-20",
+     "type": "TRANSFER",
+     "amount_rwf": 4800,
+     "receiver": "250790753504",
+     "sender": "250789140057",
+     "fee_rwf": 0
+    },
+    {
+     "id": 22,
+     "date": "2026-05-23",
+     "type": "PAYMENT",
+     "amount_rwf": 2000,
+     "receiver": "31311607",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 23,
+     "date": "2026-06-05",
+     "type": "PAYMENT",
+     "amount_rwf": 1500,
+     "receiver": "44716795",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 24,
+     "date": "2026-06-06",
+     "type": "TRANSFER",
+     "amount_rwf": 27000,
+     "receiver": "250790753504",
+     "sender": "250789014768",
+     "fee_rwf": 0
+    },
+    {
+     "id": 25,
+     "date": "2026-06-15",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44716795",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 26,
+     "date": "2026-06-18",
+     "type": "PAYMENT",
+     "amount_rwf": 3500,
+     "receiver": "31311607",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 27,
+     "date": "2026-06-24",
+     "type": "PAYMENT",
+     "amount_rwf": 1000,
+     "receiver": "44716795",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 28,
+     "date": "2026-06-25",
+     "type": "PAYMENT",
+     "amount_rwf": 1700,
+     "receiver": "31311607",
+     "sender": "250790753504",
+     "fee_rwf": 0
+    },
+    {
+     "id": 29,
+     "date": "2026-07-02",
+     "type": "TRANSFER",
+     "amount_rwf": 34000,
+     "receiver": "250790753504",
+     "sender": "250789014768",
+     "fee_rwf": 0
+    }
+   ]
+  }
+ ]
+}
