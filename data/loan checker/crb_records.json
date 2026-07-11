@@ -1,0 +1,460 @@
+{
+ "dataset": "synthetic_crb_records_v1",
+ "disclaimer": "Fully synthetic demo data modeled on Rwanda's credit reporting system (TransUnion Rwanda, regulated by BNR under Law No 73/2018). All national IDs, account references, scores and histories are fictional. Institution names are used for realism only.",
+ "report_date": "2026-07-11",
+ "how_lookup_works": "Real-world: lenders query the bureau by National ID with the borrower's consent; individuals can self-check via USSD *707# (TransUnion Menyesha). Demo: use crb_check.py -> check_crb(national_id=...) or check_crb(msisdn=...). Returns the record, or record_found=False.",
+ "score_convention": {
+  "range": "200-900",
+  "bands": {
+   "A": "750-900 low risk",
+   "B": "650-749",
+   "C": "550-649",
+   "D": "400-549",
+   "E": "200-399 very high risk"
+  }
+ },
+ "classification_convention": {
+  "PERFORMING": "0-30 days in arrears",
+  "WATCH": "31-90",
+  "SUBSTANDARD": "91-180",
+  "DOUBTFUL": "181-360",
+  "LOSS": ">360 days or written off"
+ },
+ "payment_profile_codes": {
+  "C": "paid on time",
+  "1": "1-29 days late",
+  "2": "30-59 days late",
+  "3": "60-89 days late",
+  "D": "90+ days / default",
+  "N": "no account that month",
+  "order": "most recent month first"
+ },
+ "records": [
+  {
+   "farmer_id": "F001",
+   "record_found": true,
+   "full_name": "Mukamana Josiane",
+   "national_id": "1198787812311765",
+   "msisdn": "250793116739",
+   "credit_score": {
+    "score": 782,
+    "range": "200-900",
+    "band": "A",
+    "risk": "LOW RISK"
+   },
+   "summary": {
+    "total_accounts": 4,
+    "active_accounts": 1,
+    "closed_accounts": 3,
+    "written_off_accounts": 0,
+    "total_outstanding_rwf": 90000,
+    "accounts_currently_in_arrears": 0,
+    "max_days_in_arrears_ever": 0,
+    "worst_classification_ever": "PERFORMING",
+    "negative_listing": false
+   },
+   "accounts": [
+    {
+     "account_ref": "MK-574354",
+     "lender": "MoKash (MTN Rwanda / NCBA)",
+     "lender_type": "DIGITAL_MICROLOAN",
+     "product": "30-day mobile micro loan",
+     "currency": "RWF",
+     "principal_rwf": 15000,
+     "disbursement_date": "2024-11-05",
+     "term": "30 days",
+     "status": "CLOSED",
+     "outstanding_balance_rwf": 0,
+     "days_in_arrears": 0,
+     "max_days_in_arrears": 0,
+     "classification": "PERFORMING",
+     "worst_classification_ever": "PERFORMING",
+     "date_closed": "2024-12-01",
+     "payment_profile_12m": "NNNNNNNNNNNN",
+     "note": "Repaid on time."
+    },
+    {
+     "account_ref": "MK-686963",
+     "lender": "MoKash (MTN Rwanda / NCBA)",
+     "lender_type": "DIGITAL_MICROLOAN",
+     "product": "30-day mobile micro loan",
+     "currency": "RWF",
+     "principal_rwf": 30000,
+     "disbursement_date": "2025-08-14",
+     "term": "30 days",
+     "status": "CLOSED",
+     "outstanding_balance_rwf": 0,
+     "days_in_arrears": 0,
+     "max_days_in_arrears": 0,
+     "classification": "PERFORMING",
+     "worst_classification_ever": "PERFORMING",
+     "date_closed": "2025-09-10",
+     "payment_profile_12m": "NNNNNNNNNNCN",
+     "note": "Repaid 4 days early."
+    },
+    {
+     "account_ref": "SC-998485",
+     "lender": "Umurenge SACCO \u2014 Nyagatare",
+     "lender_type": "SACCO",
+     "product": "Agricultural input loan (installments)",
+     "currency": "RWF",
+     "principal_rwf": 150000,
+     "disbursement_date": "2025-02-10",
+     "term": "10 months",
+     "status": "CLOSED",
+     "outstanding_balance_rwf": 0,
+     "days_in_arrears": 0,
+     "max_days_in_arrears": 0,
+     "classification": "PERFORMING",
+     "worst_classification_ever": "PERFORMING",
+     "date_closed": "2025-12-05",
+     "payment_profile_12m": "NNNNNNNCCCCC",
+     "note": "All installments on time."
+    },
+    {
+     "account_ref": "SC-919166",
+     "lender": "Umurenge SACCO \u2014 Nyagatare",
+     "lender_type": "SACCO",
+     "product": "Agricultural loan (installments)",
+     "currency": "RWF",
+     "principal_rwf": 200000,
+     "disbursement_date": "2025-11-20",
+     "term": "12 months",
+     "status": "OPEN",
+     "outstanding_balance_rwf": 90000,
+     "days_in_arrears": 0,
+     "max_days_in_arrears": 0,
+     "classification": "PERFORMING",
+     "worst_classification_ever": "PERFORMING",
+     "date_closed": null,
+     "payment_profile_12m": "CCCCCCCCNNNN",
+     "note": "Current, never late."
+    }
+   ],
+   "inquiries_last_12m": [
+    {
+     "date": "2025-11-15",
+     "institution": "Umurenge SACCO \u2014 Nyagatare",
+     "purpose": "Loan application"
+    }
+   ],
+   "clearance_certificate_eligible": true
+  },
+  {
+   "farmer_id": "F002",
+   "record_found": true,
+   "full_name": "Nkurunziza Emmanuel",
+   "national_id": "1197973098086860",
+   "msisdn": "250793397399",
+   "credit_score": {
+    "score": 701,
+    "range": "200-900",
+    "band": "B",
+    "risk": "MODERATE-LOW RISK"
+   },
+   "summary": {
+    "total_accounts": 3,
+    "active_accounts": 1,
+    "closed_accounts": 2,
+    "written_off_accounts": 0,
+    "total_outstanding_rwf": 43600,
+    "accounts_currently_in_arrears": 0,
+    "max_days_in_arrears_ever": 18,
+    "worst_classification_ever": "PERFORMING",
+    "negative_listing": false
+   },
+   "accounts": [
+    {
+     "account_ref": "LN-996580",
+     "lender": "Urwego Bank (MFI)",
+     "lender_type": "MICROFINANCE_BANK",
+     "product": "Coffee input loan (installments)",
+     "currency": "RWF",
+     "principal_rwf": 120000,
+     "disbursement_date": "2024-09-15",
+     "term": "10 months",
+     "status": "CLOSED",
+     "outstanding_balance_rwf": 0,
+     "days_in_arrears": 0,
+     "max_days_in_arrears": 18,
+     "classification": "PERFORMING",
+     "worst_classification_ever": "PERFORMING",
+     "date_closed": "2025-07-20",
+     "payment_profile_12m": "NNNNNCC1CCCC",
+     "note": "One installment 18 days late during lean season (Jan); recovered."
+    },
+    {
+     "account_ref": "MK-715917",
+     "lender": "MoKash (MTN Rwanda / NCBA)",
+     "lender_type": "DIGITAL_MICROLOAN",
+     "product": "30-day mobile micro loan",
+     "currency": "RWF",
+     "principal_rwf": 25000,
+     "disbursement_date": "2026-01-08",
+     "term": "30 days",
+     "status": "CLOSED",
+     "outstanding_balance_rwf": 0,
+     "days_in_arrears": 0,
+     "max_days_in_arrears": 3,
+     "classification": "PERFORMING",
+     "worst_classification_ever": "PERFORMING",
+     "date_closed": "2026-02-10",
+     "payment_profile_12m": "NNNNN1NNNNNN",
+     "note": "Repaid 3 days late."
+    },
+    {
+     "account_ref": "MK-299126",
+     "lender": "MoKash (MTN Rwanda / NCBA)",
+     "lender_type": "DIGITAL_MICROLOAN",
+     "product": "30-day mobile micro loan",
+     "currency": "RWF",
+     "principal_rwf": 40000,
+     "disbursement_date": "2026-06-20",
+     "term": "30 days",
+     "status": "OPEN",
+     "outstanding_balance_rwf": 43600,
+     "days_in_arrears": 0,
+     "max_days_in_arrears": 0,
+     "classification": "PERFORMING",
+     "worst_classification_ever": "PERFORMING",
+     "date_closed": null,
+     "payment_profile_12m": "CNNNNNNNNNNN",
+     "note": "Not yet due (due 2026-07-20)."
+    }
+   ],
+   "inquiries_last_12m": [
+    {
+     "date": "2026-01-05",
+     "institution": "MoKash (MTN Rwanda / NCBA)",
+     "purpose": "Micro loan"
+    },
+    {
+     "date": "2026-06-18",
+     "institution": "MoKash (MTN Rwanda / NCBA)",
+     "purpose": "Micro loan"
+    }
+   ],
+   "clearance_certificate_eligible": true
+  },
+  {
+   "farmer_id": "F003",
+   "record_found": true,
+   "full_name": "Uwase Claudine",
+   "national_id": "1199083123476157",
+   "msisdn": "250788870127",
+   "credit_score": {
+    "score": 618,
+    "range": "200-900",
+    "band": "C",
+    "risk": "MODERATE RISK"
+   },
+   "summary": {
+    "total_accounts": 3,
+    "active_accounts": 1,
+    "closed_accounts": 2,
+    "written_off_accounts": 0,
+    "total_outstanding_rwf": 27250,
+    "accounts_currently_in_arrears": 0,
+    "max_days_in_arrears_ever": 34,
+    "worst_classification_ever": "WATCH",
+    "negative_listing": false
+   },
+   "accounts": [
+    {
+     "account_ref": "MK-760479",
+     "lender": "MoKash (MTN Rwanda / NCBA)",
+     "lender_type": "DIGITAL_MICROLOAN",
+     "product": "30-day mobile micro loan",
+     "currency": "RWF",
+     "principal_rwf": 10000,
+     "disbursement_date": "2025-03-04",
+     "term": "30 days",
+     "status": "CLOSED",
+     "outstanding_balance_rwf": 0,
+     "days_in_arrears": 0,
+     "max_days_in_arrears": 34,
+     "classification": "PERFORMING",
+     "worst_classification_ever": "WATCH",
+     "date_closed": "2025-05-07",
+     "payment_profile_12m": "NNNNNNNNNNNN",
+     "note": "Settled 34 days late \u2014 classified WATCH at the time."
+    },
+    {
+     "account_ref": "MK-743782",
+     "lender": "MoKash (MTN Rwanda / NCBA)",
+     "lender_type": "DIGITAL_MICROLOAN",
+     "product": "30-day mobile micro loan",
+     "currency": "RWF",
+     "principal_rwf": 20000,
+     "disbursement_date": "2025-11-10",
+     "term": "30 days",
+     "status": "CLOSED",
+     "outstanding_balance_rwf": 0,
+     "days_in_arrears": 0,
+     "max_days_in_arrears": 12,
+     "classification": "PERFORMING",
+     "worst_classification_ever": "PERFORMING",
+     "date_closed": "2025-12-22",
+     "payment_profile_12m": "NNNNNNN1NNNN",
+     "note": "Repaid 12 days late."
+    },
+    {
+     "account_ref": "MK-931496",
+     "lender": "MoKash (MTN Rwanda / NCBA)",
+     "lender_type": "DIGITAL_MICROLOAN",
+     "product": "30-day mobile micro loan",
+     "currency": "RWF",
+     "principal_rwf": 25000,
+     "disbursement_date": "2026-06-28",
+     "term": "30 days",
+     "status": "OPEN",
+     "outstanding_balance_rwf": 27250,
+     "days_in_arrears": 0,
+     "max_days_in_arrears": 0,
+     "classification": "PERFORMING",
+     "worst_classification_ever": "PERFORMING",
+     "date_closed": null,
+     "payment_profile_12m": "CNNNNNNNNNNN",
+     "note": "Not yet due (due 2026-07-28)."
+    }
+   ],
+   "inquiries_last_12m": [
+    {
+     "date": "2025-11-08",
+     "institution": "MoKash (MTN Rwanda / NCBA)",
+     "purpose": "Micro loan"
+    },
+    {
+     "date": "2026-04-02",
+     "institution": "Duterimbere IMF",
+     "purpose": "Loan application (declined)"
+    },
+    {
+     "date": "2026-06-26",
+     "institution": "MoKash (MTN Rwanda / NCBA)",
+     "purpose": "Micro loan"
+    }
+   ],
+   "clearance_certificate_eligible": true
+  },
+  {
+   "farmer_id": "F004",
+   "record_found": true,
+   "full_name": "Habimana Jean Bosco",
+   "national_id": "1198379037777076",
+   "msisdn": "250792670030",
+   "credit_score": {
+    "score": 396,
+    "range": "200-900",
+    "band": "E",
+    "risk": "VERY HIGH RISK"
+   },
+   "summary": {
+    "total_accounts": 3,
+    "active_accounts": 1,
+    "closed_accounts": 1,
+    "written_off_accounts": 1,
+    "total_outstanding_rwf": 55000,
+    "accounts_currently_in_arrears": 1,
+    "max_days_in_arrears_ever": 185,
+    "worst_classification_ever": "LOSS",
+    "negative_listing": true
+   },
+   "accounts": [
+    {
+     "account_ref": "MK-418139",
+     "lender": "MoKash (MTN Rwanda / NCBA)",
+     "lender_type": "DIGITAL_MICROLOAN",
+     "product": "30-day mobile micro loan",
+     "currency": "RWF",
+     "principal_rwf": 15000,
+     "disbursement_date": "2024-08-02",
+     "term": "30 days",
+     "status": "WRITTEN_OFF",
+     "outstanding_balance_rwf": 0,
+     "days_in_arrears": 0,
+     "max_days_in_arrears": 185,
+     "classification": "LOSS",
+     "worst_classification_ever": "LOSS",
+     "date_closed": "2025-02-15",
+     "payment_profile_12m": "NNNNNNNNNNNN",
+     "note": "Never repaid; written off 2025-02-15. Negative listing (retained up to 7 years per BNR rules)."
+    },
+    {
+     "account_ref": "SC-248682",
+     "lender": "Umurenge SACCO \u2014 Bugesera",
+     "lender_type": "SACCO",
+     "product": "Agricultural loan (installments)",
+     "currency": "RWF",
+     "principal_rwf": 100000,
+     "disbursement_date": "2025-03-20",
+     "term": "12 months",
+     "status": "OPEN",
+     "outstanding_balance_rwf": 55000,
+     "days_in_arrears": 42,
+     "max_days_in_arrears": 42,
+     "classification": "WATCH",
+     "worst_classification_ever": "WATCH",
+     "date_closed": null,
+     "payment_profile_12m": "21CC1CCCNNNN",
+     "note": "Currently 42 days in arrears."
+    },
+    {
+     "account_ref": "MK-195074",
+     "lender": "MoKash (MTN Rwanda / NCBA)",
+     "lender_type": "DIGITAL_MICROLOAN",
+     "product": "30-day mobile micro loan",
+     "currency": "RWF",
+     "principal_rwf": 8000,
+     "disbursement_date": "2026-03-15",
+     "term": "30 days",
+     "status": "CLOSED",
+     "outstanding_balance_rwf": 0,
+     "days_in_arrears": 0,
+     "max_days_in_arrears": 18,
+     "classification": "PERFORMING",
+     "worst_classification_ever": "PERFORMING",
+     "date_closed": "2026-05-02",
+     "payment_profile_12m": "NN1NNNNNNNNN",
+     "note": "Small limit after prior default; repaid 18 days late."
+    }
+   ],
+   "inquiries_last_12m": [
+    {
+     "date": "2025-09-11",
+     "institution": "Bank of Kigali",
+     "purpose": "Loan application (declined)"
+    },
+    {
+     "date": "2026-01-20",
+     "institution": "Urwego Bank (MFI)",
+     "purpose": "Loan application (declined)"
+    },
+    {
+     "date": "2026-03-14",
+     "institution": "MoKash (MTN Rwanda / NCBA)",
+     "purpose": "Micro loan"
+    },
+    {
+     "date": "2026-06-30",
+     "institution": "Duterimbere IMF",
+     "purpose": "Loan application"
+    }
+   ],
+   "clearance_certificate_eligible": false
+  },
+  {
+   "farmer_id": "F005",
+   "record_found": false,
+   "full_name": "Mugisha Eric",
+   "national_id": "1200076646461783",
+   "msisdn": "250790753504",
+   "message": "No credit record found for this identifier. This person has never taken a loan from any institution that reports to the bureau (bank, MFI, SACCO, or digital lender). Bureau risk is UNDETERMINED \u2014 traditionally treated as high risk, which is exactly the gap alternative (MoMo-based) scoring closes.",
+   "credit_score": null,
+   "summary": null,
+   "accounts": [],
+   "inquiries_last_12m": [],
+   "clearance_certificate_eligible": false
+  }
+ ]
+}
