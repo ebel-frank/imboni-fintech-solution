@@ -16,7 +16,7 @@ const body = Manrope({
 export const metadata = {
   title: "Imboni | Farmer Credit Scoring",
   description:
-    "MoMo-powered credit scoring for Rwanda's smallholder farmers — Umuhinzi Hackathon 2026",
+    "MoMo-powered credit scoring for Rwanda's smallholder farmers ",
 };
 
 export default function RootLayout({ children }) {

@@ -317,7 +317,7 @@ export default function Home() {
             <span>Imboni</span>
           </nav>
           <div className="hero-copy">
-            <p className="eyebrow">Umuhinzi Hackathon · Agri-finance</p>
+            <p className="eyebrow"> Agri-finance</p>
             <h1>Turn MoMo history into fair farmer credit.</h1>
             <p>
               Credit scoring built for Rwanda&apos;s smallholder farmers — seasonal income patterns,
